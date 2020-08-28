@@ -15,13 +15,14 @@ class CreateChequesTable extends Migration
     {
         Schema::create('cheques', function (Blueprint $table) {
             $table->id(); 
-            $table->string('branch');
-            $table->string('date');
-            $table->integer('leaves');
-            $table->integer('accNumber')->unique();;
-            $table->string('accName');
-            $table->string('currency');
-            $table->string('authName');
+            $table->string('Branch');
+            $table->string('Date');
+            $table->integer('Leaves');
+            $table->integer('Account_Number')->unique();
+            $table->string('Account_Name');
+            $table->string('Currency');
+            $table->string('AuthName');
+            $table->integer('user_id')->unique();
             $table->timestamps();
         });
     }

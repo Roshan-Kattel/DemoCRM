@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\cheque;
+use App\debit;
+use App\IB;
 
-class ChequeController extends Controller
+class IBController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,13 +15,15 @@ class ChequeController extends Controller
      */
     public function index()
     {
-        //
+        
     }
+
     public function __construct()
     {
         $this->middleware('auth');
     }
     
+
     /**
      * Show the form for creating a new resource.
      *
@@ -28,8 +31,7 @@ class ChequeController extends Controller
      */
     public function create()
     {
-        
-        return view('cheque');
+        return view('IB');
     }
 
     /**
@@ -43,26 +45,37 @@ class ChequeController extends Controller
         $this->validate($request, [
             'branch' => 'required',
             'date' => 'required',
-            'leaves' => 'required',
-            'accNumber' => 'required',
-            'accName' => 'required',
-            'currency' => 'required',
-            'authName' => 'required'
+            'service' => 'required',
+            'name' => 'required',
+            'address' => 'required',
+            'acNumber' => 'required',
+            'mobile' => 'required',
+            'ebank' => 'required',
+            'CAmobile' => 'required',
+            'newAccNum' => 'required',
+            'eservice' => 'required',
+            'email' => 'required',
+            'iservice' => 'required',
         ]);
 
-        // \App\cheque::create($request->all());
-
-        $cheque = new cheque;
-
-        $cheque->Branch  = $request->input('branch');
-        $cheque->Date = $request->input('date');
-        $cheque->Leaves = $request->input('leaves');
-        $cheque->Account_Number = $request->input('accNumber');
-        $cheque->Account_Name = $request->input('accName');
-        $cheque->Currency = $request->input('currency');
-        $cheque->AuthName = $request->input('authName');
-        $cheque->user_id = auth()->user()->id;
-        $cheque->save();
+        $IB = new IB;
+            $IB-> Branch = $request->input('branch');
+            $IB-> Date = $request->input('date');
+            $IB-> Service = $request->input('service');
+            $IB-> Applicant_name = $request->input('name');
+            $IB-> Address = $request->input('address');
+            $IB-> Account_number = $request->input('acNumber');
+            $IB-> Mobile_no = $request->input('mobile');
+            $IB-> Application_for = $request->input('ebank');
+            $IB-> Change_Add_Mobile_no = $request->input('CAmobile');
+            $IB-> New_Account_no = $request->input('newAccNum');
+            $IB-> e_Required_Service = $request->input('eservice');
+            $IB-> Email = $request->input('email');
+            $IB-> i_Required_Service = $request->input('iservice');
+            $IB-> linked_Account_no = $request->input('linkedAccNo');
+            $IB-> linked_Accoun_name = $request->input('linkedAccName');
+            $IB-> user_id = auth()->user()->id;
+            $IB-> save();
         return redirect('home');
     }
 

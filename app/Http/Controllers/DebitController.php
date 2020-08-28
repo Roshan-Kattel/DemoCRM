@@ -3,9 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\debit;
 
 class DebitController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -34,8 +40,32 @@ class DebitController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'branch' => 'required',
+            'date' => 'required',
+            'service' => 'required',
+            'name' => 'required',
+            'address' => 'required',
+            'acNumber' => 'required',
+            // 'cardNumber' => 'required',
+            // 'reason' => 'required'
+        ]);
 
+        $debit = new debit;
+        $debit->Branch  = $request->input('branch');
+        $debit->Date = $request->input('date');
+        $debit->Service = $request->input('service');
+        $debit->Applicants_name = $request->input('name');
+        $debit->Applicants_Address = $request->input('address');
+        $debit->Account_Number = $request->input('acNumber');
+        $debit->Card_Type = $request->input('visa');
+        $debit->Existing_Card_Number = $request->input('cardNumber');
+        $debit->Reason_for_Replacement = $request->input('reason');
+        $debit->Supplementary_Name = $request->input('suppName');
+        $debit->user_id = auth()->user()->id;
+        $debit->save();
+
+    
         return redirect('home');
     }
 

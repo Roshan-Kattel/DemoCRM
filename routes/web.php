@@ -22,3 +22,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/cheque','ChequeController');
 Route::resource('/debit','DebitController');
+Route::resource('/IB','IBController');
+// Route::resource('/account','AccountController');

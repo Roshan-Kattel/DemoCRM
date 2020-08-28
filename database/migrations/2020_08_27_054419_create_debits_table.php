@@ -15,6 +15,17 @@ class CreateDebitsTable extends Migration
     {
         Schema::create('debits', function (Blueprint $table) {
             $table->id();
+            $table->string('Branch');
+            $table->string('Date');
+            $table->string('Service');
+            $table->string('Applicants_name');
+            $table->string('Applicants_Address');
+            $table->integer('Account_Number')->unique();
+            $table->string('Card_Type');
+            $table->integer('Existing_Card_Number')->nullable();
+            $table->string('Reason_for_Replacement')->nullable();
+            $table->integer('Supplementary_Name')->nullable();
+            $table->integer('user_id')->unique();
             $table->timestamps();
         });
     }
