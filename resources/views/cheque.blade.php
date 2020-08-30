@@ -1,18 +1,18 @@
 @extends('layouts.app')
 @section('content')
-
+@csrf
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header">
-                    <center><b>
+                    <b>
                             <h4>{{ __('CHEQUE BOOK REQUEST FORM') }}</h4>
-                        </b></center>
+                        </b>
                 </div>
                 <div class="card-body">
                     <form method="post" action="{{ url('cheque')}}">
-                        {{csrf_field() }}
+
 
                         <div class="form-group">
                             <label for="branch">Branch:</label></br>
