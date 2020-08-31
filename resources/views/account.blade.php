@@ -14,7 +14,7 @@
                             <div class="row">
 <!-- FORM STARTS HERE-->
                                 <!-- <form action="submit" method="post" accept-charset="UTF-8"> -->
-                                <form method="post" action="{{ url('account')}}">    
+                                <form method="post" enctype="multipart/form-data" action="{{ url('account')}}">
                                     @csrf
                                     <div class="col-md-12 ">
                                         <label>Please select branch from the drop down:<br></label>
@@ -401,7 +401,7 @@
                                         </div>
 
                                     <div class="col-md-3">
-                                        <input class="form-control fg-input" 
+                                        <input class="form-control fg-input"
                                                name="current_country_name" type="text" value="Nepal">
                                         <label class="fg-label">Country <span class="astrick">*</span></label>
                                     </div>
@@ -489,7 +489,7 @@
                                     <div class="form-group">
                                         <label for="upload_file" class="control-label col-sm-12 ac_head">Upload Citizenship or Passport (must be PDF): </label>
                                         <div class="col-sm-9">
-                                            <input class="form-control" type="file" accept="application/pdf" name="uploaded_doc" id="upload_file">
+                                            <input class="form-control" type="file" accept="application/pdf" name="uploaded_doc" id="upload_file" required>
                                         </div>
                                     </div>
 

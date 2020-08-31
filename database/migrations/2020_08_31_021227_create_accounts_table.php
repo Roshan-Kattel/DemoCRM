@@ -48,7 +48,8 @@ class CreateAccountsTable extends Migration
             $table->integer('expected_transaction_no');
             $table->string('nature_of_transaction');
             $table->string('internet_banking');
-            
+            //for uploaded file
+            $table->string('uploaded_doc');
             $table->integer('user_id');
             $table->timestamps();
 
@@ -59,7 +60,7 @@ class CreateAccountsTable extends Migration
      *
      * @return void
      */
-  
+
     /**
      * Reverse the migrations.
      *
