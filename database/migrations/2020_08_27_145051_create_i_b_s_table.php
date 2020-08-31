@@ -9,6 +9,7 @@ class CreateIBSTable extends Migration
     /**
      * Run the migrations.
      *
+     * 
      * @return void
      */
     public function up()
@@ -20,17 +21,17 @@ class CreateIBSTable extends Migration
             $table->string('Service');
             $table->string('Applicant_name');
             $table->string('Address');
-            $table->integer('Account_number');
-            $table->integer('Mobile_no');
+            $table->biginteger('Account_number');
+            $table->biginteger('Mobile_no');
             $table->string('Application_for');
-            $table->integer('Change_Add_Mobile_no');
-            $table->integer('New_Account_no');
+            $table->biginteger('Change_Add_Mobile_no');
+            $table->biginteger('New_Account_no');
             $table->string('e_Required_Service');
             $table->string('Email');
             $table->string('i_Required_Service');
-            $table->integer('linked_Account_no')->nullable();
+            $table->biginteger('linked_Account_no')->nullable();
             $table->string('linked_Accoun_name')->nullable();
-            $table->integer('user_id')->unique();
+            $table->integer('user_id');
             $table->timestamps();
         });
     }

@@ -25,6 +25,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
+                <!-- @include('inc.messages') -->
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Digiconnect Online Portal
                 </a>

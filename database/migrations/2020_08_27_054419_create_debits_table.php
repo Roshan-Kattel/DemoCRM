@@ -20,12 +20,12 @@ class CreateDebitsTable extends Migration
             $table->string('Service');
             $table->string('Applicants_name');
             $table->string('Applicants_Address');
-            $table->integer('Account_Number')->unique();
+            $table->biginteger('Account_Number');
             $table->string('Card_Type');
-            $table->integer('Existing_Card_Number')->nullable();
+            $table->biginteger('Existing_Card_Number')->nullable();
             $table->string('Reason_for_Replacement')->nullable();
-            $table->integer('Supplementary_Name')->nullable();
-            $table->integer('user_id')->unique();
+            $table->string('Supplementary_Name')->nullable();
+            $table->integer('user_id');
             $table->timestamps();
         });
     }

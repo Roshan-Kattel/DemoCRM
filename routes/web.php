@@ -16,15 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/newaccount', function () {
-    return view('account2');
-});
-Route::post('submit', 'newAccountController@store');
+
 Auth::routes();
+// Route::get('/account', function () {
+//     return view('account');
+// });
+// Route::post('submit', 'AccountController@store');
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('/account','AccountController');
 Route::resource('/cheque','ChequeController');
 Route::resource('/debit','DebitController');
 Route::resource('/IB','IBController');
-// Route::resource('/account','AccountController');
-

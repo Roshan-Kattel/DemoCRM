@@ -4,16 +4,11 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class NewAccountTable extends Migration
+class CreateAccountsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
-        Schema::create('newAccount_db', function (Blueprint $table) {
+        Schema::create('accounts', function (Blueprint $table) {
             $table->id();
             $table->integer('branch_ID');
             $table->string('Salutation');
@@ -45,6 +40,7 @@ class NewAccountTable extends Migration
             $table->string('current_house_no');
             $table->string('current_address');
             $table->string('current_city');
+            $table->string('current_country_name');
             //other details
             $table->string('source_of_fund');
             $table->string('expected_transaction_currency');
@@ -52,13 +48,18 @@ class NewAccountTable extends Migration
             $table->integer('expected_transaction_no');
             $table->string('nature_of_transaction');
             $table->string('internet_banking');
-            //
-            $table->integer('user_id')->unique();
+            
+            $table->integer('user_id');
             $table->timestamps();
 
         }); //
     }
-
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+  
     /**
      * Reverse the migrations.
      *
@@ -66,6 +67,6 @@ class NewAccountTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('newAccount_db'); //
+        Schema::dropIfExists('accounts');
     }
 }

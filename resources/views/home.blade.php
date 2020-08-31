@@ -6,9 +6,8 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <center><b>
-                            <h4>{{ __('DASHBOARD') }}</h4>
-                        </b></center>
+                    
+                <center><h4><b>{{ __('DASHBOARD') }}</b></h4></center>
                 </div>
 
                 <div class="card-body">

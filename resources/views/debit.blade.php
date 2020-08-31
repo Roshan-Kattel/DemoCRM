@@ -34,7 +34,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Date:</label>
+                            <label>Date (DD/MM/YYYY):</label>
                             <input type="text" class="form-control" name="date">
                         </div>
                         <div class="form-group">
@@ -51,7 +51,7 @@
                             <input type="text" class="form-control" name="address">
                         </div>
                         <div class="form-group">
-                            <label>Account number</label>
+                            <label>Account number:</label>
                             <input type="number" class="form-control" name="acNumber">
                         </div>
                         <div class="form-group">
@@ -73,8 +73,9 @@
                             <input type="radio" id="visatype8" name="visa" value="instantCard">
                             <label for="visatype8">Instant Card &nbsp;</label>
                         </div>
+                        <hr>
                         <div class="form-group">
-                            <u><b>To replace card</u></b></br>
+                            <b>To replace card</b></br>
                             <label>Current card Number:</label>
                             <input type="number" class="form-control" name="cardNumber">
                         </div>
@@ -82,8 +83,9 @@
                             <label>Reason for replacement:</label>
                             <input type="text" class="form-control" name="reason">
                         </div>
+                        <hr>
                         <div class="form-group">
-                            <u><b> Supplementary card only</b></u></br>
+                            <b> Supplementary card only</b><br>
                             <label>Name:</label>
                             <input type="text" class="form-control" name="suppName">
                         </div>

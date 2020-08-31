@@ -6,13 +6,15 @@
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <div class="card">
-                    <div class="card-header">Online Account Opening Form</div>
-
+                    <div class="card-header">
+                    <center><h4><b>ACCOUNT OPENINIG FORM</b></h4></center>
+                    </div>
                     <div class="card-body">
 
                             <div class="row">
 <!-- FORM STARTS HERE-->
-                                <form action="submit" method="post" accept-charset="UTF-8">
+                                <!-- <form action="submit" method="post" accept-charset="UTF-8"> -->
+                                <form method="post" action="{{ url('account')}}">    
                                     @csrf
                                     <div class="col-md-12 ">
                                         <label>Please select branch from the drop down:<br></label>
@@ -239,9 +241,9 @@
                                         <div class="form-group">
                                             <label class="fg-label">Nationality <span class="astrick">*</span></label>
 
-                                            <div class="fg-line disabled">
+                                            <div class="fg-line">
                                                 <input type="text" class="form-control" name="birth_country" value="Nepali"
-                                                       disabled="disabled">
+                                                       >
                                             </div>
                                         </div>
                                     </div>
@@ -367,7 +369,7 @@
                                     </div>
 
                                     <div class="col-md-3">
-                                        <input class="form-control fg-input" disabled="disabled"
+                                        <input class="form-control fg-input"
                                                        name="permanent_country_name" type="text" value="Nepal">
                                         <label class="fg-label">Country <span class="astrick">*</span></label>
                                     </div>
@@ -399,7 +401,7 @@
                                         </div>
 
                                     <div class="col-md-3">
-                                        <input class="form-control fg-input" disabled="disabled"
+                                        <input class="form-control fg-input" 
                                                name="current_country_name" type="text" value="Nepal">
                                         <label class="fg-label">Country <span class="astrick">*</span></label>
                                     </div>
@@ -495,7 +497,7 @@
 
 
                                     <div class="col-md-12">
-                                        <button type="submit" class="btn btn-primary">Submit
+                                        <button class="btn btn-primary">Submit
                                         </button>
 
                                     </div>

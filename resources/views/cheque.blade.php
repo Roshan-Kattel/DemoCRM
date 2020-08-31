@@ -1,18 +1,16 @@
 @extends('layouts.app')
 @section('content')
-@csrf
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header">
-                    <b>
-                            <h4>{{ __('CHEQUE BOOK REQUEST FORM') }}</h4>
-                        </b>
+                    <center><h4><b>{{ __('CHEQUE BOOK REQUEST FORM') }}</b></h4></center>
                 </div>
                 <div class="card-body">
                     <form method="post" action="{{ url('cheque')}}">
-
+                        {{csrf_field() }}
 
                         <div class="form-group">
                             <label for="branch">Branch:</label></br>
@@ -35,59 +33,45 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Date:</label></br>
+                            <label>Date (DD/MM/YYYY):</label></br>
                             <input type="text" class="form-control" name="date">
-                            @if ($errors-> has('date'))
-                            <small class="from-text invalid-feedback">{{$errors->first('date')}}</small>
-                            @endif
                         </div>
 
                         <div class="form-group">
-                            <label>Please Supply one Cheque book contating(10,20,30) leaves</label></br>
-                            <input type="number" class="form-control" name="leaves">
-                            @if ($errors-> has('leaves'))
-                            <small class="from-text invalid-feedback">{{$errors->first('leaves')}}</small>
-                            @endif
+                            <label>Please supply one Cheque Book contating leaves:</label><br>
+                            <input type="radio" id="chequeleaves1" name="leaves" value="10">
+                            <label for="chequeleaves1">10 &nbsp;</label>
+                            <input type="radio" id="chequeleaves2" name="leaves" value="20">
+                            <label for="chequeleaves2">20 &nbsp;</label>
+                            <input type="radio" id="chequeleaves1" name="leaves" value="30">
+                            <label for="chequeleaves3">30 &nbsp;</label>
                         </div>
 
                         <div class="form-group">
                             <label>For Account No:</label></br>
                             <input type="number" class="form-control" name="accNumber">
-                            @if ($errors-> has('accNumber'))
-                            <small class="from-text invalid-feedback">{{$errors->first('accNumber')}}</small>
-                            @endif
+
                         </div>
 
                         <div class="form-group">
                             <label>Account Name:</label></br>
                             <input type="text" class="form-control" name="accName">
-                            @if ($errors-> has('accName'))
-                            <small class="from-text invalid-feedback">{{$errors->first('accName')}}</small>
-                            @endif
                         </div>
 
                         <div class="form-group">
                             <label>Currency of Account:</label></br>
                             <input type="text" class="form-control" name="currency">
-                            @if ($errors-> has('currency'))
-                            <small class="from-text invalid-feedback">{{$errors->first('currency')}}</small>
-                            @endif
                         </div>
-
-                        <b><u>Cheque collection by authorized person</u></b>
-
+                        <hr>
+                        <b>Cheque collection by authorized person</b>
                         <div class="form-group">
                             <label>Name of Authorized person:</label></br>
                             <input type="text" class="form-control" name="authName">
-                            @if ($errors-> has('authName'))
-                            <small class="from-text invalid-feedback">{{$errors->first('authName')}}</small>
-                            @endif
                         </div>
                         <button class="btn btn-primary">Submit</button>
 
                     </form>
                 </div>
-
 
             </div>
         </div>

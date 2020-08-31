@@ -18,11 +18,11 @@ class CreateChequesTable extends Migration
             $table->string('Branch');
             $table->string('Date');
             $table->integer('Leaves');
-            $table->integer('Account_Number')->unique();
+            $table->biginteger('Account_Number');
             $table->string('Account_Name');
             $table->string('Currency');
             $table->string('AuthName');
-            $table->integer('user_id')->unique();
+            $table->integer('user_id');
             $table->timestamps();
         });
     }

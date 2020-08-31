@@ -33,7 +33,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Date:</label>
+                            <label>Date (DD/MM/YYYY):</label>
                             <input type="text" class="form-control" name="date">
                         </div>
                         <div class="form-group">
@@ -55,7 +55,8 @@
                             <label>Account number</label>
                             <input type="number" class="form-control" name="acNumber">
                         </div>
-                        <b><u>A. e-BANKING</u></b>
+                        <hr>
+                        <b>A. e-BANKING</b>
                         <div class="form-group">
                             <label>Mobile Number:</label>
                             <input type="number" class="form-control" name="mobile">
@@ -95,8 +96,8 @@
                             <input type="radio" id="eservice2" name="eservice" value="pBanking">
                             <label for="eservice2">Premium Banking &nbsp;</label>
                         </div>
-
-                        <b><u>B. i-BANKING</u></b>
+                        <hr>
+                        <b>B. i-BANKING</b>
                         <div class="form-group">
                             <label>Email:</label>
                             <input type="email" class="form-control" name="email">
@@ -109,8 +110,8 @@
                             <input type="radio" id="iservice2" name="iservice" value="fundtransfer">
                             <label for="iservice2">B. Fund Transfer &nbsp;</label>
                         </div>
-
-                        <b><u>Account to be linked</u></b>
+                        <hr>
+                        <b>Account to be linked</b>
                         <div class="form-group">
                             <label>Account Number:</label>
                             <input type="number" class="form-control" name="linkedAccNo">
