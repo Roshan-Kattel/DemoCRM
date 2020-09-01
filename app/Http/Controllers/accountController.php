@@ -42,41 +42,41 @@ class AccountController extends Controller
      */
     public function store(Request $request)
     {
-         $this->validate($request, [
-             'branch_ID' => 'required',
-             'Salutation' => 'required',
-             'first_name' => 'required',
-             'last_name' => 'required',
-             'tel_no' => 'required',
-             'mobile_no' => 'required',
-             'gender' => 'required',
-             'citizenship_passport_no' => 'required',
-             'place_of_issue' => 'required',
-             'date_of_issue' => 'required',
-             'date_type_dob' => 'required',
-             'birth_country' => 'required',
-             'marital_status' => 'required',
-             'occupation' => 'required',
-             'grand_father_name' => 'required',
-             'father_name' => 'required',
-             'mother_name' => 'required',
-             'permanent_house_no' => 'required',
-             'permanent_street' => 'required',
-             'permanent_ward_no' => 'required',
-             'permanent_vdc_mc' => 'required',
-             'permanent_city' => 'required',
-             'permanent_country_name' => 'required',
-             'current_house_no' => 'required',
-             'current_address' => 'required',
-             'current_city' => 'required',
-             'source_of_fund' => 'required',
-             'expected_transaction_currency' => 'required',
-             'expected_transaction_amount' => 'required',
-             'expected_transaction_no' => 'required',
-             'nature_of_transaction' => 'required',
-             'internet_banking' => 'required'
-
-         ]);
+//         $this->validate($request, [
+//             'branch_ID' => 'required',
+//             'Salutation' => 'required',
+//             'first_name' => 'required',
+//             'last_name' => 'required',
+//             'tel_no' => 'required',
+//             'mobile_no' => 'required',
+//             'gender' => 'required',
+//             'citizenship_passport_no' => 'required',
+//             'place_of_issue' => 'required',
+//             'date_of_issue' => 'required',
+//             'date_type_dob' => 'required',
+//             'birth_country' => 'required',
+//             'marital_status' => 'required',
+//             'occupation' => 'required',
+//             'grand_father_name' => 'required',
+//             'father_name' => 'required',
+//             'mother_name' => 'required',
+//             'permanent_house_no' => 'required',
+//             'permanent_street' => 'required',
+//             'permanent_ward_no' => 'required',
+//             'permanent_vdc_mc' => 'required',
+//             'permanent_city' => 'required',
+//             'permanent_country_name' => 'required',
+//             'current_house_no' => 'required',
+//             'current_address' => 'required',
+//             'current_city' => 'required',
+//             'source_of_fund' => 'required',
+//             'expected_transaction_currency' => 'required',
+//             'expected_transaction_amount' => 'required',
+//             'expected_transaction_no' => 'required',
+//             'nature_of_transaction' => 'required',
+//             'internet_banking' => 'required'
+//
+//         ]);
         if($request->hasFile('uploaded_doc')){
             // get file name with extension
             $fileNameWithExt = $request->file('uploaded_doc')->getClientOriginalName();
@@ -90,7 +90,7 @@ class AccountController extends Controller
             $path = $request->file('uploaded_doc')->storeAs('public/uploaded_doc',$fileNameToStore);
 
         }else{
-            $fileNameToStore = 'nodoc.png';
+            $fileNameToStore = 'nodoc.pdf';
         }
 
         $Account = new Account;
