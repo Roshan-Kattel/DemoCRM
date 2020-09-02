@@ -16,10 +16,10 @@
 
                     </div>
                     <div>
-                        <b>Date (DD/MM/YYYY):</b>&nbsp;{{$show_IB->date}}
+                        <b>Date:</b>&nbsp;{{$show_IB->date}}
                     </div>
                     <div>
-                        <b>Request to provide service offered by bank:</b>&nbsp;{{$show_IB->service}}
+                        <b>Request to provide service:</b>&nbsp;{{$show_IB->service}}
 
                     </div>
                     <div>
@@ -29,7 +29,7 @@
                         <b>Applicant's address:</b>&nbsp;{{$show_IB->address}}
                     </div>
                     <div>
-                        <b>Account number</b>&nbsp;{{$show_IB->account_number}}
+                        <b>Account number:</b>&nbsp;{{$show_IB->account_number}}
                     </div>
                     <hr>
                     <div><b>A. e-BANKING</b></div>
@@ -77,19 +77,3 @@
 </div>
 
 @endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

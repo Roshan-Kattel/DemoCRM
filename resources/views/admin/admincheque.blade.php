@@ -29,12 +29,12 @@
                                 <td>{{$cheque->user_id}}</td>
                                 <td>{{$cheque->account_number}}</td>
                                 <td>{{$cheque->account_name}}</td>
-                                <td> <a href="/cheque/{{$cheque->id}}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">View Data</a> </td>
+                                <td class > <a href="/cheque/{{$cheque->id}}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">View Data</a> </td>
                                 <td>
 
-                                    {!!Form::open(['action' => ['ChequeController@destroy',$cheque->id],'method'=>'POST','class'=>'pull-right'])!!}
+                                    {!!Form::open(['action' => ['ChequeController@destroy',$cheque->id],'method'=>'POST','class'=>'pull-left'])!!}
                                     {{Form::hidden('_method','DELETE')}}
-                                    {{Form::submit('Delete',['class'=>'btn btn-danger'])}}
+                                    {{Form::submit('Delete Data',['class'=>'btn btn-danger btn-sm'])}}
                                     {!!Form::close()!!}
                                 </td>
                             </tr>

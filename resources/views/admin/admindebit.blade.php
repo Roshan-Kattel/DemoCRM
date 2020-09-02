@@ -6,10 +6,12 @@
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header">
-                    <center><h4><b>{{ __('USER CREDIT/DEBIT CARD REQUESTS') }}</b></h4></center>
+                    <center>
+                        <h4><b>{{ __('USER CREDIT/DEBIT CARD REQUESTS') }}</b></h4>
+                    </center>
                 </div>
                 <div class="card-body">
-                <table class=" table table-striped">
+                    <table class=" table table-striped">
                         <thead>
                             <tr>
                                 <th>Rec. Id</th>
@@ -32,14 +34,14 @@
 
                                     {!!Form::open(['action' => ['DebitController@destroy',$debit->id],'method'=>'POST','class'=>'pull-right'])!!}
                                     {{Form::hidden('_method','DELETE')}}
-                                    {{Form::submit('Delete',['class'=>'btn btn-danger'])}}
+                                    {{Form::submit('Delete Data',['class'=>'btn btn-danger btn-sm'])}}
                                     {!!Form::close()!!}
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
-                    
+
                 </div>
 
             </div>

@@ -16,10 +16,10 @@
                         <b> Branch:</b> &nbsp;{{$show_debit->branch}}
                     </div>
                     <div>
-                        <b>Date (DD/MM/YYYY):</b>&nbsp;{{$show_debit->date}}
+                        <b>Date:</b>&nbsp;{{$show_debit->date}}
                     </div>
                     <div>
-                        <b>Requested services offered by bank:</b>&nbsp;{{$show_debit->service}}
+                        <b>Requested service:</b>&nbsp;{{$show_debit->service}}
                     </div>
                     <div>
                         <b>Applicant's name:</b>&nbsp;{{$show_debit->applicants_name}}
@@ -36,22 +36,22 @@
                     </div>
                     <div>
                         <hr>
-                    <b>TO REPLACE CARD</b></br>
-                    <b>Current card Number:</b>&nbsp;{{$show_debit->existing_card_number}}
-                </div>
-                <div>
-                    <b>Reason for replacement:</b> &nbsp;{{$show_debit->reason_for_replacement}}
-                </div>
-                <div>
-                    <hr>
+                        <b>TO REPLACE CARD</b></br>
+                        <b>Current card Number:</b>&nbsp;{{$show_debit->existing_card_number}}
+                    </div>
+                    <div>
+                        <b>Reason for replacement:</b> &nbsp;{{$show_debit->reason_for_replacement}}
+                    </div>
+                    <div>
+                        <hr>
 
-                    <b> SUPPLEMENTARY CARD ONLY</b><br>
-                    <b>Name:</b>&nbsp;{{$show_debit->supplementary_name}}
+                        <b> SUPPLEMENTARY CARD ONLY</b><br>
+                        <b>Name:</b>&nbsp;{{$show_debit->supplementary_name}}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 @endsection
