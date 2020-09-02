@@ -13,40 +13,40 @@
                 </div>
                 <div class="card-body">
                     <div>
-                        <label><b> Branch:</b> </label>&nbsp;{{$show_debit->branch}}
+                        <b> Branch:</b> &nbsp;{{$show_debit->branch}}
                     </div>
                     <div>
-                        <label><b>Date (DD/MM/YYYY):</b></label>&nbsp;{{$show_debit->date}}
+                        <b>Date (DD/MM/YYYY):</b>&nbsp;{{$show_debit->date}}
                     </div>
                     <div>
-                        <label><b>Requested services offered by bank:</b></label>&nbsp;{{$show_debit->service}}
+                        <b>Requested services offered by bank:</b>&nbsp;{{$show_debit->service}}
                     </div>
                     <div>
-                        <label><b>Applicant's name:</b></label>&nbsp;{{$show_debit->applicants_name}}
+                        <b>Applicant's name:</b>&nbsp;{{$show_debit->applicants_name}}
                     </div>
                     <div>
-                        <label><b>Applicant's address:</b></label> &nbsp;{{$show_debit->applicants_address}}
+                        <b>Applicant's address:</b> &nbsp;{{$show_debit->applicants_address}}
                     </div>
                     <div>
-                        <label><b>Account number:</b></label>&nbsp;{{$show_debit->account_number}}
+                        <b>Account number:</b>&nbsp;{{$show_debit->account_number}}
                     </div>
                     <div>
-                        <label><b>VISA Card Type:</b></label> &nbsp;{{$show_debit->card_Type}}
+                        <b>VISA Card Type:</b> &nbsp;{{$show_debit->card_Type}}
 
                     </div>
                     <div>
                         <hr>
                     <b>TO REPLACE CARD</b></br>
-                    <label><b>Current card Number:</b></label>&nbsp;{{$show_debit->existing_card_number}}
+                    <b>Current card Number:</b>&nbsp;{{$show_debit->existing_card_number}}
                 </div>
                 <div>
-                    <label><b>Reason for replacement:</b></label> &nbsp;{{$show_debit->reason_for_replacement}}
+                    <b>Reason for replacement:</b> &nbsp;{{$show_debit->reason_for_replacement}}
                 </div>
                 <div>
                     <hr>
 
                     <b> SUPPLEMENTARY CARD ONLY</b><br>
-                    <label><b>Name:</b></label>&nbsp;{{$show_debit->supplementary_name}}
+                    <b>Name:</b>&nbsp;{{$show_debit->supplementary_name}}
                 </div>
             </div>
         </div>

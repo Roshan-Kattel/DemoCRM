@@ -3,7 +3,7 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
                 <div class="card-header">
                     <center>
@@ -14,39 +14,39 @@
                         {{csrf_field() }}
 
                         <div>
-                            <label><b>Branch:</b></label>
+                            <b>Branch:</b>
                             &nbsp;{{$show_cheque->branch}}
                         </div>
 
                         <div>
-                            <label><b>Date (DD/MM/YYYY):</b></label>
+                            <b>Date (DD/MM/YYYY):</b>
                              &nbsp;{{$show_cheque->date}}
                         </div>
 
                         <div>
-                            <label><b>Cheque Book contating leaves:</b></label>
+                            <b>Cheque Book contating leaves:</b>
                             &nbsp;{{$show_cheque->leaves}}
                         </div>
 
                         <div>
-                            <label><b>Account Number:</b></label>
+                            <b>Account Number:</b>
                             &nbsp;{{$show_cheque->account_number}}
 
                         </div>
 
                         <div>
-                            <label><b>Account Name:</b></label>
+                            <b>Account Name:</b>
                             &nbsp;{{$show_cheque->account_name}}
                         </div>
 
                         <div>
-                            <label><b>Currency of Account:</b></label>
+                            <b>Currency of Account:</b>
                             &nbsp;{{$show_cheque->currency}}
                         </div>
                         <div>
                             <hr>
-                            <label><b> COLLECTION BY AUHORIZED PERSON</b></label><br>
-                            <label><b>Name of Authorized person:</b></label>
+                            <b> COLLECTION BY AUHORIZED PERSON</b><br>
+                            <b>Name of Authorized person:</b>
                             &nbsp;{{$show_cheque->auth_name}}
                         </div>                
                 </div>

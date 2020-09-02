@@ -12,64 +12,63 @@
                 </div>
                 <div class="card-body">
                     <div>
-                        <label><b>Branch:</b></label>&nbsp;{{$show_IB->branch}}
+                        <b>Branch:</b>&nbsp;{{$show_IB->branch}}
 
                     </div>
                     <div>
-                        <label><b>Date (DD/MM/YYYY):</b></label>&nbsp;{{$show_IB->date}}
+                        <b>Date (DD/MM/YYYY):</b>&nbsp;{{$show_IB->date}}
                     </div>
                     <div>
-                        <label><b>Request to provide service offered by bank:</b></label>&nbsp;{{$show_IB->service}}
+                        <b>Request to provide service offered by bank:</b>&nbsp;{{$show_IB->service}}
 
                     </div>
                     <div>
-                        <label><b>Applicant's name:</b></label>&nbsp;{{$show_IB->applicant_name}}
+                        <b>Applicant's name:</b>&nbsp;{{$show_IB->applicant_name}}
                     </div>
                     <div>
-                        <label><b>Applicant's address:</b></label>&nbsp;{{$show_IB->address}}
+                        <b>Applicant's address:</b>&nbsp;{{$show_IB->address}}
                     </div>
                     <div>
-                        <label><b>Account number</b></label>&nbsp;{{$show_IB->account_number}}
+                        <b>Account number</b>&nbsp;{{$show_IB->account_number}}
                     </div>
                     <hr>
                     <div><b>A. e-BANKING</b></div>
                     <div>
-                        <label><b>Mobile Number:</b></label>&nbsp;{{$show_IB->mobile_no}}
+                        <b>Mobile Number:</b>&nbsp;{{$show_IB->mobile_no}}
                     </div>
                     <div>
-                        <label><b>Application For:</b></label>&nbsp;{{$show_IB->application_for}}
+                        <b>Application For:</b>&nbsp;{{$show_IB->application_for}}
 
                     </div>
                     <div>
-                        <label><b>Change/Add Mobile No:</b></label>&nbsp;{{$show_IB->change_add_mobile_no}}
+                        <b>Change/Add Mobile No:</b>&nbsp;{{$show_IB->change_add_mobile_no}}
                     </div>
 
                     <div>
-                        <label><b>New Account Number:</b></label>&nbsp;{{$show_IB->new_account_no}}
+                        <b>New Account Number:</b>&nbsp;{{$show_IB->new_account_no}}
                     </div>
                     <div>
-                        <label><b>Required Service:</b></label>&nbsp;{{$show_IB->e_required_service}}
+                        <b>Required Service:</b>&nbsp;{{$show_IB->e_required_service}}
 
                     </div>
                     <hr>
                     <div><b>B. i-BANKING</b>
                     </div>
                     <div>
-                        <label><b>Email:</b></label>&nbsp;{{$show_IB->email}}
+                        <b>Email:</b>&nbsp;{{$show_IB->email}}
                     </div>
 
                     <div>
-                        <label><b>Service Required:</b></label>&nbsp;{{$show_IB->i_required_service}}
+                        <b>Service Required:</b>&nbsp;{{$show_IB->i_required_service}}
 
                     </div>
                     <hr>
                     <div><b>ACCOUNT TO BE LINKED</b></div>
                     <div>
-                        <label><b>Account Number:</b></label>&nbsp;{{$show_IB->linked_account_no}}
+                        <b>Account Number:</b>&nbsp;{{$show_IB->linked_account_no}}
                     </div>
                     <div>
-                        <label><b>Account Name:</b></label>&nbsp;{{$show_IB->linked_account_name}}
-
+                        <b>Account Name:</b>&nbsp;{{$show_IB->linked_account_name}}
                     </div>
                 </div>
             </div>
@@ -94,4 +93,3 @@
 
 
 
-&nbsp;{{$show_IB->linked_account_name}}
