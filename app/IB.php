@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class IB extends Model
 {
     //
-    protected $fillable = ['Date', 'Branch','Service','Applicant_name','Address','Account_number','Mobile_no','Application_for','Change_Add_Mobile_no','New_Account_no','e_Required_Service','Email','i_Required_Service','linked_Account_no','linked_Accoun_name'];
+    protected $fillable = ['date', 'branch','service','applicant_name','address','account_number','mobile_no','application_for','change_add_mobile_no','new_account_no','e_required_service','email','i_required_service','linked_Account_no','linked_accoun_name'];
 }

@@ -19,7 +19,8 @@ class DebitController extends Controller
      */
     public function index()
     {
-        
+        $debits = debit::all();
+        return view('admindebit', compact('debits'));
     }
 
     /**
@@ -52,16 +53,16 @@ class DebitController extends Controller
         ]);
 
         $debit = new debit;
-        $debit->Branch  = $request->input('branch');
-        $debit->Date = $request->input('date');
-        $debit->Service = $request->input('service');
-        $debit->Applicants_name = $request->input('name');
-        $debit->Applicants_Address = $request->input('address');
-        $debit->Account_Number = $request->input('acNumber');
-        $debit->Card_Type = $request->input('visa');
-        $debit->Existing_Card_Number = $request->input('cardNumber');
-        $debit->Reason_for_Replacement = $request->input('reason');
-        $debit->Supplementary_Name = $request->input('suppName');
+        $debit->branch  = $request->input('branch');
+        $debit->date = $request->input('date');
+        $debit->service = $request->input('service');
+        $debit->applicants_name = $request->input('name');
+        $debit->applicants_address = $request->input('address');
+        $debit->account_number = $request->input('acNumber');
+        $debit->card_type = $request->input('visa');
+        $debit->existing_card_number = $request->input('cardNumber');
+        $debit->reason_for_replacement = $request->input('reason');
+        $debit->supplementary_name = $request->input('suppName');
         $debit->user_id = auth()->user()->id;
         $debit->save();
 
@@ -77,7 +78,8 @@ class DebitController extends Controller
      */
     public function show($id)
     {
-        //
+        $show_debit = debit::find($id);
+        return view('debitdetail', compact('show_debit'));
     }
 
     /**
@@ -111,6 +113,8 @@ class DebitController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $del_debit = debit::find($id);
+        $del_debit->delete();
+        return redirect('/debit');
     }
 }

@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class cheque extends Model
 {
-    protected $fillable = ['Branch','Date','Leaves','Account_Number','Account_Name','Currency','AuthName','user_id'];
+    protected $fillable = ['branch','date','leaves','account_number','account_Name','currency','auth_name','user_id'];
 }

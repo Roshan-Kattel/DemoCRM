@@ -39,7 +39,7 @@
                         </div>
                         <div class="form-group">
                             <label>I/we request you to provide us below mentioned services offered by your bank.</label></br>
-                            <input type="radio" id="service1" name="service" value="visa">
+                            <input type="radio" id="service1" name="service" value="VISA">
                             <label for="service1">VISA card &nbsp;</label>
                         </div>
                         <div class="form-group">
@@ -56,7 +56,7 @@
                         </div>
                         <div class="form-group">
                             <label>VISA Card Type:</label><br>
-                            <input type="radio" id="visatype1" name="visa" value="visanew">
+                            <input type="radio" id="visatype1" name="visa" value="VISA-new">
                             <label for="visatype1">New &nbsp;</label>
                             <input type="radio" id="visatype2" name="visa" value="replacement">
                             <label for="visatype2">Replacement &nbsp;</label>
@@ -66,11 +66,11 @@
                             <label for="visatype4">Repin &nbsp;</label>
                             <input type="radio" id="visatype5" name="visa" value="debit">
                             <label for="visatype5">Debit &nbsp;</label>
-                            <input type="radio" id="visatype6" name="visa" value="usdDebit">
+                            <input type="radio" id="visatype6" name="visa" value="USD-Debit">
                             <label for="visatype6">USD Debit &nbsp;</label>
-                            <input type="radio" id="visatype7" name="visa" value="usdPrepaid">
+                            <input type="radio" id="visatype7" name="visa" value="USD-Prepaid">
                             <label for="visatype7">USD Prepaid &nbsp;</label>
-                            <input type="radio" id="visatype8" name="visa" value="instantCard">
+                            <input type="radio" id="visatype8" name="visa" value="instant-card">
                             <label for="visatype8">Instant Card &nbsp;</label>
                         </div>
                         <hr>

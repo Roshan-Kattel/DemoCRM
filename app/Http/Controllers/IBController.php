@@ -13,15 +13,17 @@ class IBController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        
-    }
-
     public function __construct()
     {
         $this->middleware('auth');
     }
+    
+     public function index()
+    {
+        $IBs = IB::all();
+        return view('adminIB', compact('IBs'));
+    }
+
     
 
     /**
@@ -59,21 +61,21 @@ class IBController extends Controller
         ]);
 
         $IB = new IB;
-            $IB-> Branch = $request->input('branch');
-            $IB-> Date = $request->input('date');
-            $IB-> Service = $request->input('service');
-            $IB-> Applicant_name = $request->input('name');
-            $IB-> Address = $request->input('address');
-            $IB-> Account_number = $request->input('acNumber');
-            $IB-> Mobile_no = $request->input('mobile');
-            $IB-> Application_for = $request->input('ebank');
-            $IB-> Change_Add_Mobile_no = $request->input('CAmobile');
-            $IB-> New_Account_no = $request->input('newAccNum');
-            $IB-> e_Required_Service = $request->input('eservice');
-            $IB-> Email = $request->input('email');
-            $IB-> i_Required_Service = $request->input('iservice');
-            $IB-> linked_Account_no = $request->input('linkedAccNo');
-            $IB-> linked_Accoun_name = $request->input('linkedAccName');
+            $IB-> branch = $request->input('branch');
+            $IB-> date = $request->input('date');
+            $IB-> service = $request->input('service');
+            $IB-> applicant_name = $request->input('name');
+            $IB-> address = $request->input('address');
+            $IB-> account_number = $request->input('acNumber');
+            $IB-> mobile_no = $request->input('mobile');
+            $IB-> application_for = $request->input('ebank');
+            $IB-> change_add_mobile_no = $request->input('CAmobile');
+            $IB-> new_account_no = $request->input('newAccNum');
+            $IB-> e_required_Service = $request->input('eservice');
+            $IB-> email = $request->input('email');
+            $IB-> i_required_Service = $request->input('iservice');
+            $IB-> linked_account_no = $request->input('linkedAccNo');
+            $IB-> linked_account_name = $request->input('linkedAccName');
             $IB-> user_id = auth()->user()->id;
             $IB-> save();
         return redirect('home');
@@ -87,7 +89,8 @@ class IBController extends Controller
      */
     public function show($id)
     {
-        //
+        $show_IB = IB::find($id);
+        return view('IBdetail', compact('show_IB'));
     }
 
     /**
@@ -121,6 +124,8 @@ class IBController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $del_IB = IB::find($id);
+        $del_IB->delete();
+        return redirect('/IB');
     }
 }

@@ -18,11 +18,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-// Route::get('/account', function () {
-//     return view('account');
-// });
-// Route::post('submit', 'AccountController@store');
 
+//for users
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/account','AccountController');
 Route::resource('/cheque','ChequeController');
