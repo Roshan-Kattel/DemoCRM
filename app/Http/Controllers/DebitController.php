@@ -20,7 +20,7 @@ class DebitController extends Controller
     public function index()
     {
         $debits = debit::all();
-        return view('admindebit', compact('debits'));
+        return view('admin.admindebit', compact('debits'));
     }
 
     /**
@@ -30,7 +30,7 @@ class DebitController extends Controller
      */
     public function create()
     {
-        return view('debit');
+        return view('user.debit');
     }
 
     /**
@@ -79,7 +79,7 @@ class DebitController extends Controller
     public function show($id)
     {
         $show_debit = debit::find($id);
-        return view('debitdetail', compact('show_debit'));
+        return view('admin.debitdetail', compact('show_debit'));
     }
 
     /**

@@ -75,7 +75,7 @@
                         </div>
                         <hr>
                         <div class="form-group">
-                            <b>To replace card</b></br>
+                            <b>TO REPLACE CARD</b></br>
                             <label>Current card Number:</label>
                             <input type="number" class="form-control" name="cardNumber">
                         </div>
@@ -85,7 +85,7 @@
                         </div>
                         <hr>
                         <div class="form-group">
-                            <b> Supplementary card only</b><br>
+                            <b> SUPPLEMENTARY CARD ONLY</b><br>
                             <label>Name:</label>
                             <input type="text" class="form-control" name="suppName">
                         </div>

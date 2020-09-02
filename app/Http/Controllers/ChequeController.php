@@ -20,7 +20,7 @@ class ChequeController extends Controller
      public function index()
     {
         $cheques = cheque::all();
-        return view('admincheque', compact('cheques'));
+        return view('admin.admincheque', compact('cheques'));
     }
     
     
@@ -32,7 +32,7 @@ class ChequeController extends Controller
     public function create()
     {
         
-        return view('cheque');
+        return view('user.cheque');
     }
 
     /**
@@ -75,7 +75,7 @@ class ChequeController extends Controller
     public function show($id)
     {
         $show_cheque = cheque::find($id);
-        return view('chequedetail', compact('show_cheque'));
+        return view('admin.chequedetail', compact('show_cheque'));
     }
 
     /**

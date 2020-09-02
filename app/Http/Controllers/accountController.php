@@ -31,7 +31,7 @@ class AccountController extends Controller
      */
     public function create()
     {
-        return view('account');
+        return view('user.account');
     }
 
     /**

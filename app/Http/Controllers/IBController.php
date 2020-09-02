@@ -21,7 +21,7 @@ class IBController extends Controller
      public function index()
     {
         $IBs = IB::all();
-        return view('adminIB', compact('IBs'));
+        return view('admin.adminIB', compact('IBs'));
     }
 
     
@@ -33,7 +33,7 @@ class IBController extends Controller
      */
     public function create()
     {
-        return view('IB');
+        return view('user.IB');
     }
 
     /**
@@ -90,7 +90,7 @@ class IBController extends Controller
     public function show($id)
     {
         $show_IB = IB::find($id);
-        return view('IBdetail', compact('show_IB'));
+        return view('admin.IBdetail', compact('show_IB'));
     }
 
     /**

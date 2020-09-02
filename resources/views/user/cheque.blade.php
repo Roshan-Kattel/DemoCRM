@@ -63,7 +63,7 @@
                             <input type="text" class="form-control" name="currency">
                         </div>
                         <hr>
-                        <b>Cheque collection by authorized person</b>
+                        <b>CHEQUE COLLECTION BY AUTHORIZED PERSON</b>
                         <div class="form-group">
                             <label>Name of Authorized person:</label></br>
                             <input type="text" class="form-control" name="authName">
