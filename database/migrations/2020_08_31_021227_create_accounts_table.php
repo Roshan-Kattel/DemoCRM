@@ -23,7 +23,7 @@ class CreateAccountsTable extends Migration
             $table->string('place_of_issue');
             $table->string('date_of_issue');
             $table->string('date_type_dob');
-            $table->string('date_of_birth')
+            $table->string('date_of_birth');
             $table->string('birth_country');
             $table->string('marital_status');
             $table->string('occupation');
