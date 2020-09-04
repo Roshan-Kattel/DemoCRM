@@ -26,8 +26,9 @@
 
                             <div class="col-md-12">
                                 <label>Reference Number:</label>
-                                <input class="col-md-2" name="ref_num" type="text" value="{{random_int('11111','99999')}}" disabled>
+                                <input class="col-md-2" name="ref_num" value="{{random_int('11111','99999')}}" readonly>
                             </div>
+                            <hr/>
                             <div class="col-md-12 ">
                                 <label>Please select branch from the drop down:<br></label>
 
@@ -36,8 +37,8 @@
                             <br>
                             <div class="col-md-4 col-sm-4 ">
                                 <div class="form-group">
-                                    <select name="branch" id="branch" class="form-control">
-                                        <option value="New Road">Kathmandu</option>
+                                    <select name="bank_branch_id" id="branch" class="form-control">
+                                        <option value="New Road" selected="selected">Kathmandu</option>
                                         <option value="Pokhara">Pokhara</option>
                                         <option value="Suryabinayak">Suryabinayak</option>
                                         <option value="Satdobato">Satdobato</option>
@@ -174,11 +175,11 @@
                                 <div class="form-group">
                                     <label>Marital Status : </label>
 
-                                    <input name="marital_status" type="radio" value="S"><span>&nbsp;</span>Single &nbsp;
+                                    <input name="marital_status" type="radio" value="Single"><span>&nbsp;</span>Single &nbsp;
 
-                                    <input name="marital_status" type="radio" value="M"><span>&nbsp;</span>Married &nbsp;
+                                    <input name="marital_status" type="radio" value="Married"><span>&nbsp;</span>Married &nbsp;
 
-                                    <input name="marital_status" type="radio" value="O"><span>&nbsp;Other</span> &nbsp;
+                                    <input name="marital_status" type="radio" value="Other"><span>&nbsp;Other</span> &nbsp;
 
                                 </div>
                             </div>
@@ -188,11 +189,11 @@
                                 <div class="form-group">
                                     <label>Occupation : </label>
 
-                                    <input name="occupation" type="radio" value="Sal"><span>&nbsp;</span>Salaried &nbsp;
+                                    <input name="occupation" type="radio" value="Salaried"><span>&nbsp;</span>Salaried &nbsp;
 
-                                    <input name="occupation" type="radio" value="SelfE"><span>&nbsp;</span>Self employed &nbsp;
+                                    <input name="occupation" type="radio" value="Self-Employed"><span>&nbsp;</span>Self employed &nbsp;
 
-                                    <input name="occupation" type="radio" value="Prof"><span>&nbsp;Professional</span> &nbsp;
+                                    <input name="occupation" type="radio" value="Professional"><span>&nbsp;Professional</span> &nbsp;
                                     <input name="occupation" type="radio" value="Other"><span>&nbsp;</span>Other &nbsp;
                                 </div>
                             </div>
@@ -249,7 +250,7 @@
                                     <label class="fg-label">Mother's Name <span class="astrick">*</span></label>
                                 </div>
                             </div>
-                            <br>
+                            <hr/>
 
                             <div class="col-md-12 ac_head">Permanent Address </div><br>
                             <div class="row col-md-12">

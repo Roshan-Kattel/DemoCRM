@@ -21,7 +21,7 @@
                         </div>
                         <div>
                             <b>Salutation:</b>
-                            &nbsp;{{$show_account->Salutation}}
+                            &nbsp;{{$show_account->salutation}}
                         </div>
                         <div>
                             <b>First Name:</b>

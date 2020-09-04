@@ -21,13 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4313b7fe-7208-42a1-bff4-1241afa407a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_26_164448_create_cheques_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/2020_08_26_164448_create_cheques_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_27_054419_create_debits_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/2020_08_27_054419_create_debits_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_27_145051_create_i_b_s_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/2020_08_27_145051_create_i_b_s_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_31_021227_create_accounts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_31_021227_create_accounts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/accountdetail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/accountdetail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/account.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/account.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,9 +169,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sworup\Desktop\DiGiConnect Laravel CRM\democrm\database\migrations" />
       <recent name="C:\Users\Sworup\Desktop\DiGiConnect Laravel CRM\democrm\database\seeds" />
       <recent name="C:\Users\Sworup\Desktop\DiGiConnect Laravel CRM\democrm\app\Http\Controllers" />
-      <recent name="C:\Users\Sworup\Desktop\DiGiConnect Laravel CRM\democrm\database\migrations" />
     </key>
   </component>
   <component name="RunManager">
@@ -204,7 +200,7 @@
       <workItem from="1599126209310" duration="12990000" />
       <workItem from="1599189317119" duration="1440000" />
       <workItem from="1599193567147" duration="618000" />
-      <workItem from="1599194303199" duration="298000" />
+      <workItem from="1599194303199" duration="1923000" />
     </task>
     <servers />
   </component>
