@@ -43,41 +43,35 @@ class AccountController extends Controller
      */
     public function store(Request $request)
     {
-        //  $this->validate($request, [
-        //      'branch_ID' => 'required',
-        //      'Salutation' => 'required',
-        //      'first_name' => 'required',
-        //      'last_name' => 'required',
-        //      'tel_no' => 'required',
-        //      'mobile_no' => 'required',
-        //      'gender' => 'required',
-        //      'citizenship_passport_no' => 'required',
-        //      'place_of_issue' => 'required',
-        //      'date_of_issue' => 'required',
-        //      'date_type_dob' => 'required',
-        //      'birth_country' => 'required',
-        //      'marital_status' => 'required',
-        //      'occupation' => 'required',
-        //      'grand_father_name' => 'required',
-        //      'father_name' => 'required',
-        //      'mother_name' => 'required',
-        //      'permanent_house_no' => 'required',
-        //      'permanent_street' => 'required',
-        //      'permanent_ward_no' => 'required',
-        //      'permanent_vdc_mc' => 'required',
-        //      'permanent_city' => 'required',
-        //      'permanent_country_name' => 'required',
-        //      'current_house_no' => 'required',
-        //      'current_address' => 'required',
-        //      'current_city' => 'required',
-        //      'source_of_fund' => 'required',
-        //      'expected_transaction_currency' => 'required',
-        //      'expected_transaction_amount' => 'required',
-        //      'expected_transaction_no' => 'required',
-        //      'nature_of_transaction' => 'required',
-        //      'internet_banking' => 'required'
-
-        //  ]);
+          $this->validate($request, [
+              'Salutation' => 'required',
+              'first_name' => 'required',
+              'last_name' => 'required',
+              'mobile_no' => 'required',
+              'gender' => 'required',
+              'citizenship_passport_no' => 'required',
+              'place_of_issue' => 'required',
+              'date_of_issue' => 'required',
+              'date_of_birth' => 'required',
+              'birth_country' => 'required',
+              'marital_status' => 'required',
+              'occupation' => 'required',
+              'grand_father_name' => 'required',
+              'father_name' => 'required',
+              'mother_name' => 'required',
+              'permanent_ward_no' => 'required',
+              'permanent_vdc_mc' => 'required',
+              'permanent_city' => 'required',
+              'permanent_country_name' => 'required',
+              'current_address' => 'required',
+              'current_city' => 'required',
+              'source_of_fund' => 'required',
+              'expected_transaction_currency' => 'required',
+              'expected_transaction_amount' => 'required',
+              'expected_transaction_no' => 'required',
+              'nature_of_transaction' => 'required',
+              'internet_banking' => 'required'
+          ]);
         if ($request->hasFile('uploaded_doc')) {
             // get file name with extension
             $fileNameWithExt = $request->file('uploaded_doc')->getClientOriginalName();
@@ -112,7 +106,13 @@ class AccountController extends Controller
         $Account->birth_country = $request->input('birth_country');
         $Account->marital_status = $request->input('marital_status');
         $Account->occupation = $request->input('occupation');
-        // skipped organization name and details here
+        //organization name and details here
+        $Account->organization_name = $request->input('organization_name');
+        $Account->organization_address = $request->input('organization_address');
+        $Account->designation = $request->input('designation');
+        $Account->estimated_annual_income = $request->input('estimated_annual_income');
+        $Account->organization_tel_no = $request->input('organization_tel_no');
+        //other family information
         $Account->grand_father_name = $request->input('grand_father_name');
         $Account->father_name = $request->input('father_name');
         $Account->mother_name = $request->input('mother_name');
@@ -136,9 +136,12 @@ class AccountController extends Controller
         $Account->nature_of_transaction = $request->input('nature_of_transaction');
         $Account->internet_banking = $request->input('internet_banking');
         $Account->uploaded_doc = $fileNameToStore;
+        //for account number and account status
+        $Account->account_number = $request->input('account_number');
+        $Account->account_status = $request->input('account_status');
         $Account->user_id = auth()->user()->id;
         $Account->save();
-        return redirect('home')->with('success', 'New account creation has been submitted!');
+        return redirect('/account')->with('success', 'New account has been submitted, and is now processing!');
     }
 
     /**
@@ -151,7 +154,10 @@ class AccountController extends Controller
     {
         $show_account = account::find($id);
         return view('admin.accountdetail', compact('show_account'));
+
     }
+
+
 
     /**
      * Show the form for editing the specified resource.
@@ -161,7 +167,8 @@ class AccountController extends Controller
      */
     public function edit($id)
     {
-        //
+       $update_account=account::find($id);
+       return view('admin.accountstatus',compact('update_account','id'));//
     }
 
     /**
@@ -173,7 +180,14 @@ class AccountController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this-> validate($request,[
+            'account_number' => 'required'
+        ]);//
+        $update_account=account::find($id);
+        $update_account-> account_number = $request->get('account_number');
+        $update_account-> account_status = $request->get('account_status');
+        $update_account->save();
+        return redirect('/account')->with('success','Data update');
     }
 
     /**

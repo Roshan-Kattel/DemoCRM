@@ -18,18 +18,24 @@
                         <th>Reference Number</th>
                         <th>Account Name</th>
                         <th>Mobile Number</th>
+                        <th>Status</th>
                         <th>View Data</th>
                         <th>Delete Data</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach ($accounts as $account)
+                        @if($account->account_status == 'pending')
+
+
                         <tr>
                             <td>{{$account->id}}</td>
                             <td>{{$account->reference_number}}</td>
                             <td>{{$account->first_name}} {{$account->middle_name}} {{$account->last_name}}</td>
                             <td>{{$account->mobile_no}}</td>
-                            <td class > <a href="/account/{{$account->id}}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">View Data</a> </td>
+                            <td> <a href="{{action('AccountController@edit', $account['id'])}}" class="btn btn-primary btn-warning" role="button" aria-pressed="true">Update</a> </td>
+
+                            <td> <a href="/account/{{$account->id}}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">View Data</a> </td>
                             <td>
                                 {!!Form::open(['action' => ['AccountController@destroy',$account->id],'method'=>'POST','class'=>'pull-right'])!!}
                                 {{Form::hidden('_method','DELETE')}}
@@ -37,6 +43,8 @@
                                 {!!Form::close()!!}
                             </td>
                         </tr>
+
+                        @endif
                     @endforeach
                     </tbody>
                 </table>

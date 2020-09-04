@@ -27,19 +27,25 @@ class CreateAccountsTable extends Migration
             $table->string('birth_country');
             $table->string('marital_status');
             $table->string('occupation');
-            //skipped organization name and details here
+            //organization name and details here
+            $table->string('organization_name')->nullable();
+            $table->string('organization_address')->nullable();
+            $table->string('designation')->nullable();
+            $table->string('estimated_annual_income')->nullable();
+            $table->string('organization_tel_no')->nullable();
+            //more family information
             $table->string('grand_father_name');
             $table->string('father_name');
             $table->string('mother_name');
             //permanant address starts below
-            $table->string('permanent_house_no');
-            $table->string('permanent_street');
+            $table->string('permanent_house_no')->nullable();
+            $table->string('permanent_street')->nullable();
             $table->string('permanent_ward_no');
             $table->string('permanent_vdc_mc');
             $table->string('permanent_city');
             $table->string('permanent_country_name');
             //current address starts below
-            $table->string('current_house_no');
+            $table->string('current_house_no')->nullable();
             $table->string('current_address');
             $table->string('current_city');
             $table->string('current_country_name');
@@ -50,6 +56,9 @@ class CreateAccountsTable extends Migration
             $table->integer('expected_transaction_no');
             $table->string('nature_of_transaction');
             $table->string('internet_banking');
+            //for account status and account number
+            $table->string('account_number')->nullable();
+            $table->string('account_status');
             //for uploaded file
             $table->string('uploaded_doc');
             $table->integer('user_id');

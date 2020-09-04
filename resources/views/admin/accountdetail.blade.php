@@ -12,7 +12,7 @@
                     <div class="card-body">
                         <div>
                             <b>Reference Number:</b>
-                            <input class="col-md-2"value="{{$show_account->reference_number}}" disabled>
+                            {{$show_account->reference_number}}
                         </div>
                         <hr/>
                         <div>
@@ -86,6 +86,32 @@
                         </div>
                         <hr/>
                         <div>
+                            ORGANIZATION DETAILS:
+                        </div>
+                        <div>
+                            <b>Name:</b>
+                            &nbsp;{{$show_account->organization_name}}
+                        </div>
+                        <div>
+                            <b>Address:</b>
+                            &nbsp;{{$show_account->organization_address}}
+                        </div>
+                        <div>
+                            <b>Designation:</b>
+                            &nbsp;{{$show_account->designation}}
+                        </div>
+                        <div>
+                            <b>Estimated Annual Income:</b>
+                            &nbsp;{{$show_account->estimated_annual_income}}
+                        </div>
+                        <div>
+                            <b>Telephone Number:</b>
+                            &nbsp;{{$show_account->organization_tel_no}}
+                        </div>
+
+
+                    <hr/>
+                        <div>
                             <b>Grand Father's Name:</b>
                             &nbsp;{{$show_account->grand_father_name}}
                         </div>
@@ -104,23 +130,23 @@
                         <br>
                         <div>
                             <b>Permanent House No:</b>
-                            &nbsp;{{$show_account->permanant_house_no}}
+                            &nbsp;{{$show_account->permanent_house_no}}
                         </div>
                         <div>
                             <b>Ward No:</b>
-                            &nbsp;{{$show_account->permanant_ward_no}}
+                            &nbsp;{{$show_account->permanent_ward_no}}
                         </div>
                         <div>
                             <b>VDC/MC:</b>
-                            &nbsp;{{$show_account->permanant_vdc_mc}}
+                            &nbsp;{{$show_account->permanent_vdc_mc}}
                         </div>
                         <div>
                             <b>City:</b>
-                            &nbsp;{{$show_account->permanant_city}}
+                            &nbsp;{{$show_account->permanent_city}}
                         </div>
                         <div>
                             <b>Country:</b>
-                            &nbsp;{{$show_account->permanant_country_name}}
+                            &nbsp;{{$show_account->permanent_country_name}}
                         </div>
                         <br>
                         <div>B) CURRENT DETAILS</div>
@@ -169,6 +195,7 @@
                         <div>
                             <b>Uploaded Doc:</b>
                             &nbsp; {{$show_account->uploaded_doc}}
+
                             <a href="{{storage_path()}}\app\public\uploaded_doc\{{$show_account->uploaded_doc}}" target="_blank">(CLICK HERE)</a>
                         </div>
 

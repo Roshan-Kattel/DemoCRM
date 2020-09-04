@@ -16,13 +16,20 @@
                                 </b></h4>
                     </center>
                 </div>
+                @if(count($errors)>0)
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{$error}}</li>
+                        @endforeach
+                    </ul>
+                @endif
                 <div class="card-body">
 
                     <div class="row">
                         <!-- FORM STARTS HERE-->
                         <!-- <form action="submit" method="post" accept-charset="UTF-8"> -->
                         <form method="post" enctype="multipart/form-data" action="{{ url('account')}}">
-                            @csrf
+                            {{csrf_field()}}
 
                             <div class="col-md-12">
                                 <label>Reference Number:</label>
@@ -57,7 +64,7 @@
 
                             <div class="col-md-12 ">
                                 <div class="form-group">
-                                    <label>Salutation : </label>
+                                    <label>Salutation* : </label>
 
                                     <input name="Salutation" type="radio" value="Mr"><span>&nbsp;</span>Mr &nbsp;
 
@@ -71,34 +78,33 @@
 
                             <div class="row col-md-12">
                                 <div class="col">
-                                    <input class="form-control" name="first_name" type="text">
                                     <label class="fg-label">First Name <span class="astrick">*</span></label>
+                                    <input class="form-control" name="first_name" type="text">
                                 </div>
                                 <div class="col">
-                                    <input class="form-control" name="middle_name" type="text">
                                     <label class="fg-label">Middle Name</label>
+                                    <input class="form-control" name="middle_name" type="text">
                                 </div>
                                 <div class="col">
-                                    <input class="form-control" name="last_name" type="text">
                                     <label class="fg-label">Last Name <span class="astrick">*</span></label>
+                                    <input class="form-control" name="last_name" type="text">
                                 </div>
                             </div>
 
                             <div class="row col-md-8">
                                 <div class="col">
-                                    <input class="form-control" name="tel_no" type="text">
                                     <label class="fg-label">Tel No.</label>
-
+                                    <input class="form-control" name="tel_no" type="text">
                                 </div>
                                 <div class="col">
-                                    <input class="form-control fg-input" name="mobile_no" type="text">
                                     <label class="fg-label">Mobile No. <span class="astrick">*</span></label>
+                                    <input class="form-control fg-input" name="mobile_no" type="text">
                                 </div>
                             </div>
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label>Gender : </label>
+                                    <label>Gender* : </label>
 
                                     <input name="gender" type="radio" value="M">
                                     <span>&nbsp;</span> Male &nbsp;
@@ -114,20 +120,20 @@
 
                             <div class="row col-md-8">
                                 <div class="col">
-                                    <input class="form-control" name="citizenship_passport_no" type="text">
                                     <label class="fg-label">Citizenship/Passport No. <span class="astrick">*</span></label>
+                                    <input class="form-control" name="citizenship_passport_no" type="text">
                                 </div>
 
                                 <div class="col">
-                                    <input class="form-control fg-input" name="place_of_issue" type="text">
                                     <label class="fg-label">Place of Issue: <span class="astrick">*</span></label>
+                                    <input class="form-control fg-input" name="place_of_issue" type="text">
                                 </div>
                             </div>
                             <br>
                             <div class="row col-md-5">
                                 <div class="col">
-                                    <input class="form-control" name="date_of_issue" type="text">
                                     <label class="fg-label">Date of Issue (DD/MM/YYYY)&nbsp;<span class="astrick">*</span></label>
+                                    <input class="form-control" name="date_of_issue" type="text">
                                 </div>
                             </div>
 
@@ -154,8 +160,8 @@
 
                             <div class="row col-md-5">
                                 <div class="col">
-                                    <input class="form-control" name="date_of_birth" type="text">
                                     <label class="fg-label">(DD/MM/YYYY) format<span class="astrick">*</span></label>
+                                    <input class="form-control" name="date_of_birth" type="text">
                                 </div>
                             </div>
 
@@ -173,7 +179,7 @@
 
                             <div class="col-md-12 ">
                                 <div class="form-group">
-                                    <label>Marital Status : </label>
+                                    <label>Marital Status* : </label>
 
                                     <input name="marital_status" type="radio" value="Single"><span>&nbsp;</span>Single &nbsp;
 
@@ -187,7 +193,7 @@
 
                             <div class="col-md-12 ">
                                 <div class="form-group">
-                                    <label>Occupation : </label>
+                                    <label>Occupation* : </label>
 
                                     <input name="occupation" type="radio" value="Salaried"><span>&nbsp;</span>Salaried &nbsp;
 
@@ -200,34 +206,33 @@
 
                             <div class="row col-md-12">
                                 <div class="col">
-                                    <input class="form-control fg-input" name="organization_name" type="text">
                                     <label class="fg-label">Organization Name</label>
+                                    <input class="form-control fg-input" name="organization_name" type="text">
+
 
                                 </div>
 
                                 <div class="col">
-                                    <input class="form-control fg-input" name="organization_address" type="text">
-
                                     <label class="fg-label">Address</label>
+
+                                    <input class="form-control fg-input" name="organization_address" type="text">
                                 </div>
 
-
                                 <div class="col">
-                                    <input class="form-control fg-input" name="designation" type="text">
                                     <label class="fg-label">Designation</label>
+                                    <input class="form-control fg-input" name="designation" type="text">
                                 </div>
                             </div>
 
                             <div class="row col-md-8">
-
                                 <div class="col">
-                                    <input class="form-control fg-input" name="estimated_annual_income" type="text">
                                     <label class="fg-label">Estimated Annual Income</label>
+                                    <input class="form-control fg-input" name="estimated_annual_income" type="text">
                                 </div>
 
                                 <div class="col">
-                                    <input class="form-control fg-input" name="organization_tel_no" type="text">
                                     <label class="fg-label">Tel No.</label>
+                                    <input class="form-control fg-input" name="organization_tel_no" type="text">
                                 </div>
                             </div>
                             <hr />
@@ -236,18 +241,21 @@
                             <br>
                             <div class="row col-md-12">
                                 <div class="col">
-                                    <input class="form-control fg-input" name="grand_father_name" type="text">
                                     <label class="fg-label">Grandfather's Name <span class="astrick">*</span></label>
+                                    <input class="form-control fg-input" name="grand_father_name" type="text">
+
                                 </div>
 
                                 <div class="col">
-                                    <input class="form-control fg-input" name="father_name" type="text">
                                     <label class="fg-label">Father's Name <span class="astrick">*</span></label>
+                                    <input class="form-control fg-input" name="father_name" type="text">
+
                                 </div>
 
                                 <div class="col">
-                                    <input class="form-control fg-input" name="mother_name" type="text">
                                     <label class="fg-label">Mother's Name <span class="astrick">*</span></label>
+                                    <input class="form-control fg-input" name="mother_name" type="text">
+
                                 </div>
                             </div>
                             <hr/>
@@ -255,35 +263,35 @@
                             <div class="col-md-12 ac_head">Permanent Address </div><br>
                             <div class="row col-md-12">
                                 <div class="col">
-                                    <input class="form-control fg-input" id="p_house_no" name="permanent_house_no" type="text">
                                     <label class="fg-label">House No.</label>
-
+                                    <input class="form-control fg-input" id="p_house_no" name="permanent_house_no" type="text">
                                 </div>
 
                                 <div class="col">
-                                    <input class="form-control fg-input" name="permanent_street" type="text">
                                     <label class="fg-label">Street</label>
+                                    <input class="form-control fg-input" name="permanent_street" type="text">
                                 </div>
 
                                 <div class="col col-md-2">
-                                    <input class="form-control fg-input" name="permanent_ward_no" type="text">
                                     <label class="fg-label">Ward No. <span class="astrick">*</span></label>
+                                    <input class="form-control fg-input" name="permanent_ward_no" type="text">
                                 </div>
 
                                 <div class="col">
-                                    <input class="form-control fg-input" name="permanent_vdc_mc" type="text">
                                     <label class="fg-label">VDC/MC <span class="astrick">*</span></label>
+                                    <input class="form-control fg-input" name="permanent_vdc_mc" type="text">
                                 </div>
                             </div>
 
                             <div class="col-md-3">
-                                <input class="form-control fg-input" name="permanent_city" type="text">
                                 <label class="fg-label">City <span class="astrick">*</span></label>
+                                <input class="form-control fg-input" name="permanent_city" type="text">
                             </div>
 
                             <div class="col-md-3">
-                                <input class="form-control fg-input" name="permanent_country_name" type="text" value="Nepal">
                                 <label class="fg-label">Country <span class="astrick">*</span></label>
+                                <input class="form-control fg-input" name="permanent_country_name" type="text" value="Nepal">
+
                             </div>
 
                             <hr />
@@ -294,28 +302,30 @@
 
                             <div class="row col-md-12">
                                 <div class="col">
-                                    <input class="form-control fg-input" name="current_house_no" type="text">
                                     <label class="fg-label">House No.</label>
+                                    <input class="form-control fg-input" name="current_house_no" type="text">
                                 </div>
 
                                 <div class="col">
-                                    <input class="form-control fg-input" name="current_address" type="text">
                                     <label class="fg-label">Address <span class="astrick">*</span></label>
+                                    <input class="form-control fg-input" name="current_address" type="text">
+
                                 </div>
 
                                 <div class="col">
-                                    <input class="form-control fg-input" name="current_city" type="text">
                                     <label class="fg-label">City <span class="astrick">*</span></label>
+                                    <input class="form-control fg-input" name="current_city" type="text">
                                 </div>
                             </div>
 
                             <div class="col-md-3">
-                                <input class="form-control fg-input" name="current_country_name" type="text" value="Nepal">
                                 <label class="fg-label">Country <span class="astrick">*</span></label>
+                                <input class="form-control fg-input" name="current_country_name" type="text" value="Nepal">
+
                             </div>
 
                             <hr />
-                            <div class="col-md-12">Source of fund : </div>
+                            <div class="col-md-12">Source of fund* : </div>
                             <div class="col-md-12 ">
                                 <div class="form-group">
 
@@ -333,25 +343,25 @@
                             <div class="col-md-12">Average Expected Transaction per month : </div>
                             <div class="row col-md-12">
                                 <div class="col-md-2">
-                                    <input class="form-control fg-input" name="expected_transaction_currency" type="text" value="NPR">
                                     <label class="fg-label">Currency <span class="astrick">*</span></label>
+                                    <input class="form-control fg-input" name="expected_transaction_currency" type="text" value="NPR">
                                 </div>
 
                                 <div class="col">
-                                    <input class="form-control fg-input" name="expected_transaction_amount" type="text">
                                     <label class="fg-label">Amount <span class="astrick">*</span></label>
+                                    <input class="form-control fg-input" name="expected_transaction_amount" type="text">
                                 </div>
 
                                 <div class="col">
-                                    <input class="form-control fg-input" name="expected_transaction_no" type="text">
                                     <label class="fg-label">No. of transaction <span class="astrick">*</span></label>
+                                    <input class="form-control fg-input" name="expected_transaction_no" type="text">
                                 </div>
                             </div>
 
 
                             <br>
 
-                            <div class="col-md-12 ">Nature of Transaction : </div>
+                            <div class="col-md-12 ">Nature of Transaction* : </div>
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>
@@ -373,7 +383,7 @@
 
                             <div class="col-md-12 ">
                                 <div class="form-group">
-                                    <label>Do you want Internet Banking Facility?</label> <br>
+                                    <label>Do you want Internet Banking Facility?*</label> <br>
 
                                     <input checked="checked" name="internet_banking" type="radio" value="0">
                                     <i class="input-helper"></i>
@@ -394,6 +404,8 @@
                                 </div>
                             </div>
 
+                            <input type="hidden" name="account_number" value="">
+                            <input type="hidden" name="account_status" value="pending">
 
 
 

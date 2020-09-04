@@ -21,8 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4313b7fe-7208-42a1-bff4-1241afa407a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/accountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/accountController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_31_021227_create_accounts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_31_021227_create_accounts_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/accountdetail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/accountdetail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/adminaccount.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/adminaccount.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/account.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/account.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -200,7 +202,8 @@
       <workItem from="1599126209310" duration="12990000" />
       <workItem from="1599189317119" duration="1440000" />
       <workItem from="1599193567147" duration="618000" />
-      <workItem from="1599194303199" duration="1923000" />
+      <workItem from="1599194303199" duration="1969000" />
+      <workItem from="1599197180685" duration="12172000" />
     </task>
     <servers />
   </component>
@@ -256,5 +259,20 @@
       <screen x="0" y="0" width="1474" height="864" />
     </state>
     <state x="394" y="197" key="run.anything.popup/0.0.1474.864@0.0.1474.864" timestamp="1599128791090" />
+    <state x="400" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1599205306534">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state x="400" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1474.864@0.0.1474.864" timestamp="1599205306534" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/user/account.blade.php</url>
+          <line>373</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
