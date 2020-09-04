@@ -9,7 +9,7 @@
                     <center><h4><b>{{ __('CHEQUE BOOK REQUEST FORM') }}</b></h4></center>
                 </div>
                 <div class="card-body">
-                    <form method="post" action="{{ url('cheque')}}">
+                    <form method="post" enctype="multipart/form-data" action="{{ url('cheque')}}">
                         {{csrf_field() }}
 
                         <div class="form-group">

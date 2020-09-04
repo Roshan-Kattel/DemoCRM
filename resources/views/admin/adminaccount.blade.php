@@ -7,7 +7,7 @@
         <div class="card">
             <div class="card-header">
                 <center>
-                    <h4><b>{{ __('BANK USER ACCOUNTS') }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ url('account/create')}}" class="btn btn-primary btn-sm" role="button" aria-pressed="true"> + Open New Account</a></b></h4>
+                    <h4><b>{{ __('BANK USER ACCOUNTS') }} </b></h4>
                 </center>
             </div>
             <div class="card-body">
@@ -25,7 +25,7 @@
                     </thead>
                     <tbody>
                     @foreach ($accounts as $account)
-                        @if($account->account_status == 'pending')
+                        @if($account->status == 'new')
 
 
                         <tr>
@@ -33,11 +33,11 @@
                             <td>{{$account->reference_number}}</td>
                             <td>{{$account->first_name}} {{$account->middle_name}} {{$account->last_name}}</td>
                             <td>{{$account->mobile_no}}</td>
-                            <td> <a href="{{action('AccountController@edit', $account['id'])}}" class="btn btn-primary btn-warning" role="button" aria-pressed="true">Update</a> </td>
+                            <td> <a href="{{action('AccountController@edit', $account['id'])}}" class="btn btn-primary btn-warning btn-sm" role="button" aria-pressed="true">Update status</a> </td>
 
                             <td> <a href="/account/{{$account->id}}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">View Data</a> </td>
                             <td>
-                                {!!Form::open(['action' => ['AccountController@destroy',$account->id],'method'=>'POST','class'=>'pull-right'])!!}
+                                {!!Form::open(['action' => ['AccountController@destroy',$account->id],'method'=>'POST','class'=>'pull-left'])!!}
                                 {{Form::hidden('_method','DELETE')}}
                                 {{Form::submit('Delete Data',['class'=>'btn btn-danger btn-sm'])}}
                                 {!!Form::close()!!}

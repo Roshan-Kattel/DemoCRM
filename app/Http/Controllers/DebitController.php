@@ -11,6 +11,7 @@ class DebitController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('admin', ['only' => ['index','edit','update','show','destroy']]);
     }
     /**
      * Display a listing of the resource.
@@ -67,7 +68,7 @@ class DebitController extends Controller
         $debit->save();
 
     
-        return redirect('home');
+        return redirect('home')->with('success', 'Debit/Credit card request has been submitted!');
     }
 
     /**
@@ -90,7 +91,10 @@ class DebitController extends Controller
      */
     public function edit($id)
     {
-        //
+        $update_debit=debit::find($id);
+        $update_debit->status = "approved";
+        $update_debit->save();
+        return redirect('debit')->with('success', 'Credit/Debit card Request has been approved!');
     }
 
     /**

@@ -13,7 +13,7 @@
                 </div>
                 <div class="card-body">
 
-                    <form method="post" action="{{ url('debit')}}">
+                    <form method="post" enctype="multipart/form-data" action="{{ url('debit')}}">
                         {{csrf_field() }}
                         <div class="form-group">
                             <label for="branch">Branch:</label></br>
@@ -41,6 +41,8 @@
                             <label>I/we request you to provide us below mentioned services offered by your bank.</label></br>
                             <input type="radio" id="service1" name="service" value="VISA">
                             <label for="service1">VISA card &nbsp;</label>
+                            <input type="radio" id="service2" name="service" value="DEBIT">
+                            <label for="service2">DEBIT card &nbsp;</label>
                         </div>
                         <div class="form-group">
                             <label>Applicant's name:</label>

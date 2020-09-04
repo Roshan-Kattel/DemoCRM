@@ -25,6 +25,7 @@ class CreateDebitsTable extends Migration
             $table->biginteger('existing_card_number')->nullable();
             $table->string('reason_for_replacement')->nullable();
             $table->string('supplementary_name')->nullable();
+            $table->string('status')->default('new');
             $table->integer('user_id');
             $table->timestamps();
         });

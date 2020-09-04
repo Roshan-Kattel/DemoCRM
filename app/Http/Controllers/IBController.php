@@ -16,15 +16,17 @@ class IBController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('admin', ['only' => ['index','edit','update','show','destroy']]);
     }
-    
-     public function index()
+
+    public function index()
     {
+
         $IBs = IB::all();
         return view('admin.adminIB', compact('IBs'));
     }
 
-    
+
 
     /**
      * Show the form for creating a new resource.
@@ -61,23 +63,23 @@ class IBController extends Controller
         ]);
 
         $IB = new IB;
-            $IB-> branch = $request->input('branch');
-            $IB-> date = $request->input('date');
-            $IB-> service = $request->input('service');
-            $IB-> applicant_name = $request->input('name');
-            $IB-> address = $request->input('address');
-            $IB-> account_number = $request->input('acNumber');
-            $IB-> mobile_no = $request->input('mobile');
-            $IB-> application_for = $request->input('ebank');
-            $IB-> change_add_mobile_no = $request->input('CAmobile');
-            $IB-> new_account_no = $request->input('newAccNum');
-            $IB-> e_required_Service = $request->input('eservice');
-            $IB-> email = $request->input('email');
-            $IB-> i_required_Service = $request->input('iservice');
-            $IB-> linked_account_no = $request->input('linkedAccNo');
-            $IB-> linked_account_name = $request->input('linkedAccName');
-            $IB-> user_id = auth()->user()->id;
-            $IB-> save();
+        $IB->branch = $request->input('branch');
+        $IB->date = $request->input('date');
+        $IB->service = $request->input('service');
+        $IB->applicant_name = $request->input('name');
+        $IB->address = $request->input('address');
+        $IB->account_number = $request->input('acNumber');
+        $IB->mobile_no = $request->input('mobile');
+        $IB->application_for = $request->input('ebank');
+        $IB->change_add_mobile_no = $request->input('CAmobile');
+        $IB->new_account_no = $request->input('newAccNum');
+        $IB->e_required_Service = $request->input('eservice');
+        $IB->email = $request->input('email');
+        $IB->i_required_Service = $request->input('iservice');
+        $IB->linked_account_no = $request->input('linkedAccNo');
+        $IB->linked_account_name = $request->input('linkedAccName');
+        $IB->user_id = auth()->user()->id;
+        $IB->save();
         return redirect('home');
     }
 
@@ -89,8 +91,11 @@ class IBController extends Controller
      */
     public function show($id)
     {
+
+
         $show_IB = IB::find($id);
         return view('admin.IBdetail', compact('show_IB'));
+        return redirect('home')->with('success', 'Internet Banking Request has been submitted!');
     }
 
     /**
@@ -101,7 +106,11 @@ class IBController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        $update_IB = IB::find($id);
+        $update_IB->status = "approved";
+        $update_IB->save();
+        return redirect('IB')->with('success', 'IB Book Request has been approved!');
     }
 
     /**
@@ -124,6 +133,7 @@ class IBController extends Controller
      */
     public function destroy($id)
     {
+
         $del_IB = IB::find($id);
         $del_IB->delete();
         return redirect('/IB');

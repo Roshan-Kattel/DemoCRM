@@ -19,11 +19,14 @@
                                 <th>Account Number</th>
                                 <th>Account Name</th>
                                 <th>View Data</th>
+                                <th>Status</th>
                                 <th>Delete Data</th>
                             </tr>
                         </thead>
                         <tbody>
+                            
                             @foreach ($IBs as $IB)
+                            @if($IB->status=="new")
                             <tr>
                                 <td>{{$IB->id}}</td>
                                 <td>{{$IB->user_id}}</td>
@@ -31,14 +34,19 @@
                                 <td>{{$IB->applicant_name}}</td>
                                 <td> <a href="/IB/{{$IB->id}}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">View Data</a> </td>
                                 <td>
+                                <a href="{{action('IBController@edit', $IB['id'])}}" class="btn btn-success btn-sm" role="button" aria-pressed="true">Approve</a>
+                                </td>
+                                <td>
 
-                                    {!!Form::open(['action' => ['IBController@destroy',$IB->id],'method'=>'POST','class'=>'pull-right'])!!}
+                                    {!!Form::open(['action' => ['IBController@destroy',$IB->id],'method'=>'POST','class'=>'pull-left'])!!}
                                     {{Form::hidden('_method','DELETE')}}
                                     {{Form::submit('Delete Data',['class'=>'btn btn-danger btn-sm'])}}
                                     {!!Form::close()!!}
                                 </td>
                             </tr>
+                            @endif
                             @endforeach
+                            
                         </tbody>
                     </table>
                 </div>

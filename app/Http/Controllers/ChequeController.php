@@ -16,14 +16,15 @@ class ChequeController extends Controller
     {
         $this->middleware('auth');
     }
-    
-     public function index()
+
+    public function index()
     {
+
         $cheques = cheque::all();
         return view('admin.admincheque', compact('cheques'));
     }
-    
-    
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -31,8 +32,9 @@ class ChequeController extends Controller
      */
     public function create()
     {
-        
+
         return view('user.cheque');
+        $this->middleware('admin', ['only' => ['index','edit','update','show','destroy']]);
     }
 
     /**
@@ -63,7 +65,7 @@ class ChequeController extends Controller
         $cheque->auth_name = $request->input('authName');
         $cheque->user_id = auth()->user()->id;
         $cheque->save();
-        return redirect('home');
+        return redirect('home')->with('success', 'Cheque Book Request has been submitted!');
     }
 
     /**
@@ -74,6 +76,7 @@ class ChequeController extends Controller
      */
     public function show($id)
     {
+
         $show_cheque = cheque::find($id);
         return view('admin.chequedetail', compact('show_cheque'));
     }
@@ -86,7 +89,11 @@ class ChequeController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        $update_cheque = cheque::find($id);
+        $update_cheque->status = "approved";
+        $update_cheque->save();
+        return redirect('cheque')->with('success', 'Cheque Book Request has been Approved!');
     }
 
     /**
@@ -109,9 +116,9 @@ class ChequeController extends Controller
      */
     public function destroy($id)
     {
+
         $del_cheque = cheque::find($id);
         $del_cheque->delete();
         return redirect('/cheque');
     }
-    
 }

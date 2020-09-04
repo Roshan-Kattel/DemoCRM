@@ -7,21 +7,16 @@
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header">
-                    <center>@if ((auth()->user()->id) == 1)
-                            &nbsp;&nbsp;<a href="{{ url()->previous() }}" class="btn btn-danger" role="button"> <- Go Back</a>
-                        @else
-                            &nbsp;
-                        @endif
-                        <h4><b>ACCOUNT OPENING FORM
-                                </b></h4>
+                    <center>
+                        <h4><b>ACCOUNT OPENING FORM</b></h4>
                     </center>
                 </div>
                 @if(count($errors)>0)
-                    <ul>
-                        @foreach($errors->all() as $error)
-                            <li>{{$error}}</li>
-                        @endforeach
-                    </ul>
+                <ul>
+                    @foreach($errors->all() as $error)
+                    <li>{{$error}}</li>
+                    @endforeach
+                </ul>
                 @endif
                 <div class="card-body">
 
@@ -35,7 +30,7 @@
                                 <label>Reference Number:</label>
                                 <input class="col-md-2" name="ref_num" value="{{random_int('11111','99999')}}" readonly>
                             </div>
-                            <hr/>
+                            <hr />
                             <div class="col-md-12 ">
                                 <label>Please select branch from the drop down:<br></label>
 
@@ -258,7 +253,7 @@
 
                                 </div>
                             </div>
-                            <hr/>
+                            <hr />
 
                             <div class="col-md-12 ac_head">Permanent Address </div><br>
                             <div class="row col-md-12">
@@ -377,10 +372,7 @@
 
                                 </div>
                             </div>
-
-
-
-
+                            
                             <div class="col-md-12 ">
                                 <div class="form-group">
                                     <label>Do you want Internet Banking Facility?*</label> <br>
@@ -395,8 +387,6 @@
                                 </div>
                             </div>
 
-
-
                             <div class="form-group">
                                 <label for="upload_file" class="control-label col-sm-12 ac_head">Upload Citizenship or Passport (must be PDF): </label>
                                 <div class="col-sm-9">
@@ -405,9 +395,8 @@
                             </div>
 
                             <input type="hidden" name="account_number" value="">
-                            <input type="hidden" name="account_status" value="pending">
-
-
+                            <input type="hidden" name="customer_ID" value="">
+                            <!-- <input type="hidden" name="status" value="pending"> -->
 
                             <div class="col-md-12">
                                 <button class="btn btn-primary">Submit

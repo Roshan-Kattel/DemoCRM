@@ -58,7 +58,8 @@ class CreateAccountsTable extends Migration
             $table->string('internet_banking');
             //for account status and account number
             $table->string('account_number')->nullable();
-            $table->string('account_status');
+            $table->string('status')->default('new');
+            $table->integer('customer_ID')->nullable();
             //for uploaded file
             $table->string('uploaded_doc');
             $table->integer('user_id');

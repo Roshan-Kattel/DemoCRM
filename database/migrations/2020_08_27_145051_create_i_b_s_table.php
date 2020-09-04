@@ -31,6 +31,7 @@ class CreateIBSTable extends Migration
             $table->string('i_required_service');
             $table->biginteger('linked_account_no')->nullable();
             $table->string('linked_account_name')->nullable();
+            $table->string('status')->default('new');
             $table->integer('user_id');
             $table->timestamps();
         });

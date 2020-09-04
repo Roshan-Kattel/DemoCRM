@@ -17,6 +17,7 @@ class AccountController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('admin', ['only' => ['index','edit','update','show','destroy']]);
     }
 
     public function index()
@@ -43,35 +44,35 @@ class AccountController extends Controller
      */
     public function store(Request $request)
     {
-          $this->validate($request, [
-              'Salutation' => 'required',
-              'first_name' => 'required',
-              'last_name' => 'required',
-              'mobile_no' => 'required',
-              'gender' => 'required',
-              'citizenship_passport_no' => 'required',
-              'place_of_issue' => 'required',
-              'date_of_issue' => 'required',
-              'date_of_birth' => 'required',
-              'birth_country' => 'required',
-              'marital_status' => 'required',
-              'occupation' => 'required',
-              'grand_father_name' => 'required',
-              'father_name' => 'required',
-              'mother_name' => 'required',
-              'permanent_ward_no' => 'required',
-              'permanent_vdc_mc' => 'required',
-              'permanent_city' => 'required',
-              'permanent_country_name' => 'required',
-              'current_address' => 'required',
-              'current_city' => 'required',
-              'source_of_fund' => 'required',
-              'expected_transaction_currency' => 'required',
-              'expected_transaction_amount' => 'required',
-              'expected_transaction_no' => 'required',
-              'nature_of_transaction' => 'required',
-              'internet_banking' => 'required'
-          ]);
+        $this->validate($request, [
+            'Salutation' => 'required',
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'mobile_no' => 'required',
+            'gender' => 'required',
+            'citizenship_passport_no' => 'required',
+            'place_of_issue' => 'required',
+            'date_of_issue' => 'required',
+            'date_of_birth' => 'required',
+            'birth_country' => 'required',
+            'marital_status' => 'required',
+            'occupation' => 'required',
+            'grand_father_name' => 'required',
+            'father_name' => 'required',
+            'mother_name' => 'required',
+            'permanent_ward_no' => 'required',
+            'permanent_vdc_mc' => 'required',
+            'permanent_city' => 'required',
+            'permanent_country_name' => 'required',
+            'current_address' => 'required',
+            'current_city' => 'required',
+            'source_of_fund' => 'required',
+            'expected_transaction_currency' => 'required',
+            'expected_transaction_amount' => 'required',
+            'expected_transaction_no' => 'required',
+            'nature_of_transaction' => 'required',
+            'internet_banking' => 'required'
+        ]);
         if ($request->hasFile('uploaded_doc')) {
             // get file name with extension
             $fileNameWithExt = $request->file('uploaded_doc')->getClientOriginalName();
@@ -84,12 +85,11 @@ class AccountController extends Controller
             // upload image
             $path = $request->file('uploaded_doc')->storeAs('public/uploaded_doc', $fileNameToStore);
 
-        } else {
             $fileNameToStore = 'nodoc.pdf';
         }
 
         $Account = new Account;
-        $Account->reference_number=$request->input('ref_num');
+        $Account->reference_number = $request->input('ref_num');
         $Account->branch_ID = $request->input('bank_branch_id');
         $Account->salutation = $request->input('Salutation');
         $Account->first_name = $request->input('first_name');
@@ -102,7 +102,7 @@ class AccountController extends Controller
         $Account->place_of_issue = $request->input('place_of_issue');
         $Account->date_of_issue = $request->input('date_of_issue');
         $Account->date_type_dob = $request->input('date_type');
-        $Account->date_of_birth=$request->input('date_of_birth');
+        $Account->date_of_birth = $request->input('date_of_birth');
         $Account->birth_country = $request->input('birth_country');
         $Account->marital_status = $request->input('marital_status');
         $Account->occupation = $request->input('occupation');
@@ -138,10 +138,10 @@ class AccountController extends Controller
         $Account->uploaded_doc = $fileNameToStore;
         //for account number and account status
         $Account->account_number = $request->input('account_number');
-        $Account->account_status = $request->input('account_status');
+        // $Account->account_status = $request->input('account_status');
         $Account->user_id = auth()->user()->id;
         $Account->save();
-        return redirect('/account')->with('success', 'New account has been submitted, and is now processing!');
+        return redirect('/home')->with('success', 'New account has been submitted, and is now processing!');
     }
 
     /**
@@ -152,9 +152,9 @@ class AccountController extends Controller
      */
     public function show($id)
     {
+
         $show_account = account::find($id);
         return view('admin.accountdetail', compact('show_account'));
-
     }
 
 
@@ -167,8 +167,11 @@ class AccountController extends Controller
      */
     public function edit($id)
     {
-       $update_account=account::find($id);
-       return view('admin.accountstatus',compact('update_account','id'));//
+
+        $update_account = account::find($id);
+        return view('admin.accountstatus', compact('update_account', 'id')); //
+
+
     }
 
     /**
@@ -180,14 +183,16 @@ class AccountController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this-> validate($request,[
+
+        $this->validate($request, [
             'account_number' => 'required'
-        ]);//
-        $update_account=account::find($id);
-        $update_account-> account_number = $request->get('account_number');
-        $update_account-> account_status = $request->get('account_status');
+        ]); //
+        $update_account = account::find($id);
+        $update_account->account_number = $request->get('account_number');
+        $update_account->status = $request->get('status');
+        $update_account->customer_ID = $request->get('customer_ID');
         $update_account->save();
-        return redirect('/account')->with('success','Data update');
+        return redirect('/home')->with('success', 'Data update');
     }
 
     /**
@@ -198,8 +203,11 @@ class AccountController extends Controller
      */
     public function destroy($id)
     {
+
         $del_account = account::find($id);
         $del_account->delete();
-        return redirect('/account');//
+        return redirect('/account'); //
+
+
     }
 }

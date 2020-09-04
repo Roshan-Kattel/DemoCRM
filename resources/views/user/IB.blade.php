@@ -12,7 +12,7 @@
                 </div>
                 <div class="card-body">
 
-                    <form method="post" action="{{ url('IB')}}">
+                    <form method="post" enctype="multipart/form-data" action="{{ url('IB')}}">
                         {{csrf_field() }}
                         <div class="form-group">
                             <label for="branch">Branch:</label></br>

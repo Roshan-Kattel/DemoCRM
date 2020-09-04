@@ -22,6 +22,7 @@ class CreateChequesTable extends Migration
             $table->string('account_name');
             $table->string('currency');
             $table->string('auth_name');
+            $table->string('status')->default('new');
             $table->integer('user_id');
             $table->timestamps();
         });
