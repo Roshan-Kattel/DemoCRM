@@ -20,15 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4313b7fe-7208-42a1-bff4-1241afa407a7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/democrm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/democrm.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Account.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/accountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/accountController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_31_021227_create_accounts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_31_021227_create_accounts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/admindebit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admindebit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/account.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/account.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/adminaccount.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/adminaccount.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +197,8 @@
       <workItem from="1598856447288" duration="148000" />
       <workItem from="1599126209310" duration="12990000" />
       <workItem from="1599189317119" duration="1440000" />
-      <workItem from="1599193567147" duration="537000" />
+      <workItem from="1599193567147" duration="618000" />
+      <workItem from="1599194303199" duration="46000" />
     </task>
     <servers />
   </component>

@@ -14,8 +14,8 @@
                 <table class=" table table-striped">
                     <thead>
                     <tr>
-                        <th>Rec. Id</th>
-                        <th>User Id</th>
+                        <th>ID</th>
+                        <th>Reference Number</th>
                         <th>Account Name</th>
                         <th>Mobile Number</th>
                         <th>View Data</th>
@@ -26,7 +26,7 @@
                     @foreach ($accounts as $account)
                         <tr>
                             <td>{{$account->id}}</td>
-                            <td>{{$account->user_id}}</td>
+                            <td>{{$account->reference_number}}</td>
                             <td>{{$account->first_name}} {{$account->middle_name}} {{$account->last_name}}</td>
                             <td>{{$account->mobile_no}}</td>
                             <td class > <a href="/account/{{$account->id}}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">View Data</a> </td>
