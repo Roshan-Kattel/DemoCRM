@@ -10,6 +10,7 @@ class CreateAccountsTable extends Migration
     {
         Schema::create('accounts', function (Blueprint $table) {
             $table->id();
+            $table->string('reference_number');
             $table->integer('branch_ID');
             $table->string('salutation');
             $table->string('first_name');
@@ -22,6 +23,7 @@ class CreateAccountsTable extends Migration
             $table->string('place_of_issue');
             $table->string('date_of_issue');
             $table->string('date_type_dob');
+            $table->string('date_of_birth')
             $table->string('birth_country');
             $table->string('marital_status');
             $table->string('occupation');

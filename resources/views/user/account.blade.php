@@ -7,8 +7,13 @@
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header">
-                    <center>
-                        <h4><b>ACCOUNT OPENINIG FORM</b></h4>
+                    <center>@if ((auth()->user()->id) == 1)
+                            &nbsp;&nbsp;<a href="{{ url()->previous() }}" class="btn btn-danger" role="button"> <- Go Back</a>
+                        @else
+                            &nbsp;
+                        @endif
+                        <h4><b>ACCOUNT OPENING FORM
+                                </b></h4>
                     </center>
                 </div>
                 <div class="card-body">
@@ -18,10 +23,17 @@
                         <!-- <form action="submit" method="post" accept-charset="UTF-8"> -->
                         <form method="post" enctype="multipart/form-data" action="{{ url('account')}}">
                             @csrf
+
+                            <div class="col-md-12">
+                                <label>Reference Number:</label>
+                                <input class="col-md-2" name="ref_num" type="text" value="{{random_int('11111','99999')}}" disabled>
+                            </div>
                             <div class="col-md-12 ">
                                 <label>Please select branch from the drop down:<br></label>
 
                             </div>
+
+                            <br>
                             <div class="col-md-4 col-sm-4 ">
                                 <div class="form-group">
                                     <select name="branch" id="branch" class="form-control">

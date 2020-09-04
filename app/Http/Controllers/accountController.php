@@ -21,7 +21,8 @@ class AccountController extends Controller
 
     public function index()
     {
-        //
+        $accounts = account::all();
+        return view('admin.adminaccount', compact('accounts')); //
     }
 
     /**
@@ -37,7 +38,7 @@ class AccountController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -77,23 +78,24 @@ class AccountController extends Controller
         //      'internet_banking' => 'required'
 
         //  ]);
-        if($request->hasFile('uploaded_doc')){
+        if ($request->hasFile('uploaded_doc')) {
             // get file name with extension
             $fileNameWithExt = $request->file('uploaded_doc')->getClientOriginalName();
             // get just file name
-            $filename = pathinfo($fileNameWithExt,PATHINFO_FILENAME);
+            $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
             // get just extension
             $extension = $request->file('uploaded_doc')->getClientOriginalExtension();
             // file name to store
-            $fileNameToStore =$filename.'_'.time().'.'.$extension;
+            $fileNameToStore = $filename . '_' . time() . '.' . $extension;
             // upload image
-            $path = $request->file('uploaded_doc')->storeAs('public/uploaded_doc',$fileNameToStore);
+            $path = $request->file('uploaded_doc')->storeAs('public/uploaded_doc', $fileNameToStore);
 
-        }else{
+        } else {
             $fileNameToStore = 'nodoc.pdf';
         }
 
         $Account = new Account;
+        $Account->reference_number=$request->input('ref_num');
         $Account->branch_ID = $request->input('bank_branch_id');
         $Account->salutation = $request->input('Salutation');
         $Account->first_name = $request->input('first_name');
@@ -106,6 +108,7 @@ class AccountController extends Controller
         $Account->place_of_issue = $request->input('place_of_issue');
         $Account->date_of_issue = $request->input('date_of_issue');
         $Account->date_type_dob = $request->input('date_type');
+        $Account->date_of_birth=$request->input('date_of_birth');
         $Account->birth_country = $request->input('birth_country');
         $Account->marital_status = $request->input('marital_status');
         $Account->occupation = $request->input('occupation');
@@ -135,24 +138,25 @@ class AccountController extends Controller
         $Account->uploaded_doc = $fileNameToStore;
         $Account->user_id = auth()->user()->id;
         $Account->save();
-        return redirect('home')->with('success','New account creation has been submitted!');
+        return redirect('home')->with('success', 'New account creation has been submitted!');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        //
+        $show_account = account::find($id);
+        return view('admin.accountdetail', compact('show_account'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -163,8 +167,8 @@ class AccountController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -175,21 +179,13 @@ class AccountController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        //
+        $del_account = account::find($id);
+        $del_account->delete();
+        return redirect('/account');//
     }
-
-//    public function upload(Request $request)
-//    {
-//        $uniqueFileName = uniqid() . $request->get('upload_file')->getClientOriginalName() . '.' . $request->get('upload_file')->getClientOriginalExtension();
-//
-//        $request->get('upload_file')->move(public_path('files') . $uniqueFileName);
-//
-//        return redirect()->back()->with('success', 'File uploaded successfully.');
-//    }
-
 }
