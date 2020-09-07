@@ -6,9 +6,9 @@
     <div class="col-md-10">
         <div class="card">
             <div class="card-header">
-                <center>
-                    <h4><b>{{ __('BANK USER ACCOUNTS') }} </b></h4>
-                </center>
+
+                    <h4><b>{{ __('BANK USER ACCOUNTS') }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ url('account/create')}}" class="btn btn-primary btn-sm" role="button" aria-pressed="true"> + Open New Account</a></b></h4>
+
             </div>
             <div class="card-body">
                 <table class=" table table-striped">

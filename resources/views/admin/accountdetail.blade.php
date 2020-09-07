@@ -194,9 +194,10 @@
                         <hr/>
                         <div>
                             <b>Uploaded Doc:</b>
-                            &nbsp; {{$show_account->uploaded_doc}}
+                            &nbsp;{{$show_account->uploaded_doc}}
 
-                            <a href="{{storage_path()}}\app\public\uploaded_doc\{{$show_account->uploaded_doc}}" target="_blank">(CLICK HERE)</a>
+{{--                           <a href="storage\uploaded_doc\{{$show_account->uploaded_doc}}" >(CLICK HERE)</a>--}}
+                          <a href="http://localhost:8000/storage/uploaded_doc/{{$show_account->uploaded_doc}}" target="_blank">(CLICK HERE)</a>
                         </div>
 
                     </div>

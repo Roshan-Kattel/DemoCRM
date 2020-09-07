@@ -84,9 +84,10 @@ class AccountController extends Controller
             $fileNameToStore = $filename . '_' . time() . '.' . $extension;
             // upload image
             $path = $request->file('uploaded_doc')->storeAs('public/uploaded_doc', $fileNameToStore);
-
-            $fileNameToStore = 'nodoc.pdf';
+        } else {
+            $fileNameToStore = 'NO DOCUMENT UPLOADED/FOUND';
         }
+
 
         $Account = new Account;
         $Account->reference_number = $request->input('ref_num');

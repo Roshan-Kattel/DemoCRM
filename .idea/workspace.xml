@@ -22,7 +22,6 @@
     <list default="true" id="4313b7fe-7208-42a1-bff4-1241afa407a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/accountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/accountController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_31_021227_create_accounts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_31_021227_create_accounts_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/accountdetail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/accountdetail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/adminaccount.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/adminaccount.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/account.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/account.blade.php" afterDir="false" />
@@ -203,7 +202,10 @@
       <workItem from="1599189317119" duration="1440000" />
       <workItem from="1599193567147" duration="618000" />
       <workItem from="1599194303199" duration="1969000" />
-      <workItem from="1599197180685" duration="12172000" />
+      <workItem from="1599197180685" duration="12284000" />
+      <workItem from="1599210286717" duration="2335000" />
+      <workItem from="1599366122902" duration="6658000" />
+      <workItem from="1599462866293" duration="1705000" />
     </task>
     <servers />
   </component>
@@ -269,7 +271,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/user/account.blade.php</url>
-          <line>373</line>
+          <line>366</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

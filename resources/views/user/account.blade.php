@@ -7,9 +7,7 @@
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header">
-                    <center>
                         <h4><b>ACCOUNT OPENING FORM</b></h4>
-                    </center>
                 </div>
                 @if(count($errors)>0)
                 <ul>
@@ -372,7 +370,7 @@
 
                                 </div>
                             </div>
-                            
+
                             <div class="col-md-12 ">
                                 <div class="form-group">
                                     <label>Do you want Internet Banking Facility?*</label> <br>
