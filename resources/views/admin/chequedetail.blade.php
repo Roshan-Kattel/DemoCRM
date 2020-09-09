@@ -13,39 +13,39 @@
                  <div class="card-body">
                      <div>
                          <b>Branch:</b>
-                         &nbsp;{{$show_cheque->branch}}
+                         &nbsp;<span>{{$show_cheque->branch}}</span>
                      </div>
 
                      <div>
                          <b>Date:</b>
-                         &nbsp;{{$show_cheque->date}}
+                         &nbsp;<span>{{$show_cheque->date}}</span>
                      </div>
 
                      <div>
                          <b>No of leaves:</b>
-                         &nbsp;{{$show_cheque->leaves}}
+                         &nbsp;<span>{{$show_cheque->leaves}}</span>
                      </div>
 
                      <div>
                          <b>Account Number:</b>
-                         &nbsp;{{$show_cheque->account_number}}
+                         &nbsp;<span>{{$show_cheque->account_number}}</span>
 
                      </div>
 
                      <div>
                          <b>Account Name:</b>
-                         &nbsp;{{$show_cheque->account_name}}
+                         &nbsp;<span>{{$show_cheque->account_name}}</span>
                      </div>
 
                      <div>
                          <b>Currency of Account:</b>
-                         &nbsp;{{$show_cheque->currency}}
+                         &nbsp;<span>{{$show_cheque->currency}}</span>
                      </div>
                      <div>
                          <hr>
                          <b> COLLECTION BY AUHORIZED PERSON</b><br>
                          <b>Name of Authorized person:</b>
-                         &nbsp;{{$show_cheque->auth_name}}
+                         &nbsp;<span>{{$show_cheque->auth_name}}</span>
                      </div>
                  </div>
              </div>

@@ -12,77 +12,77 @@
                     <div class="card-body">
                         <div>
                             <b>Reference Number:</b>
-                            {{$show_account->reference_number}}
+                            <span>{{$show_account->reference_number}}</span>
                         </div>
                         <hr/>
                         <div>
                             <b>Branch:</b>
-                            &nbsp;{{$show_account->branch_ID}}
+                            &nbsp;<span>{{$show_account->branch_ID}}</span>
                         </div>
                         <div>
                             <b>Salutation:</b>
-                            &nbsp;{{$show_account->salutation}}
+                            &nbsp;<span>{{$show_account->salutation}}</span>
                         </div>
                         <div>
                             <b>First Name:</b>
-                            &nbsp;{{$show_account->first_name}}
+                            &nbsp;<span>{{$show_account->first_name}}</span>
                         </div>
                         <div>
                             <b>Middle Name:</b>
-                            &nbsp;{{$show_account->middle_name}}
+                            &nbsp;<span>{{$show_account->middle_name}}</span>
                         </div>  <div>
                             <b>Last Name:</b>
-                            &nbsp;{{$show_account->last_name}}
+                            &nbsp;<span>{{$show_account->last_name}}</span>
                         </div>
 
 
                         <div>
                             <b>Telephone Number:</b>
-                            &nbsp;{{$show_account->tel_no}}
+                            &nbsp;<span>{{$show_account->tel_no}}</span>
                         </div>
 
                         <div>
                             <b>Mobile Number:</b>
-                            &nbsp;{{$show_account->mobile_no}}
+                            &nbsp;<span>{{$show_account->mobile_no}}</span>
                         </div>
 
                         <div>
                             <b>Gender</b>
-                            &nbsp;{{$show_account->gender}}
+                            &nbsp;<span>{{$show_account->gender}}</span>
                         </div>
                         <hr>
                         <div>
                             <b>Citizenship/Passport Number:</b>
-                            &nbsp;{{$show_account->citizenship_passport_no}}
+                            &nbsp;<span>{{$show_account->citizenship_passport_no}}</span>
 
                         </div>
 
                         <div>
                             <b>Place of Issue:</b>
-                            &nbsp;{{$show_account->place_of_issue}}
+                            &nbsp;<span>{{$show_account->place_of_issue}}</span>
                         </div>
 
                         <div>
                             <b>Date of Issue:</b>
-                            &nbsp;{{$show_account->date_of_issue}}
+                            &nbsp;<span>{{$show_account->date_of_issue}}</span>
                         </div>
 
                         <div>
                             <b>Date of Birth:</b>
-                            &nbsp;{{$show_account->date_of_birth}} {{$show_account->date_type_dob}}
+                            &nbsp;<span>{{$show_account->date_of_birth}}</span> <span>{{$show_account->date_type_dob}}</span>
                         </div>
 
                         <div>
                             <b>Birth Country:</b>
-                            &nbsp;{{$show_account->birth_country}}
+                            &nbsp;<span>{{$show_account->birth_country}}</span>
                         </div>
                         <div>
                             <b>Marital Status:</b>
-                            &nbsp;{{$show_account->marital_status}}
+                            &nbsp;<span>{{$show_account->marital_status}}</span>
                         </div>
                         <div>
                             <b>Occupation:</b>
-                            &nbsp;{{$show_account->occupation}}
+                            &nbsp;<span>{{$show_account->occupation}}</span>
                         </div>
                         <hr/>
                         <div>
@@ -90,38 +90,38 @@
                         </div>
                         <div>
                             <b>Name:</b>
-                            &nbsp;{{$show_account->organization_name}}
+                            &nbsp;<span>{{$show_account->organization_name}}</span>
                         </div>
                         <div>
                             <b>Address:</b>
-                            &nbsp;{{$show_account->organization_address}}
+                            &nbsp;<span>{{$show_account->organization_address}}</span>
                         </div>
                         <div>
                             <b>Designation:</b>
-                            &nbsp;{{$show_account->designation}}
+                            &nbsp;<span>{{$show_account->designation}}</span>
                         </div>
                         <div>
                             <b>Estimated Annual Income:</b>
-                            &nbsp;{{$show_account->estimated_annual_income}}
+                            &nbsp;<span>{{$show_account->estimated_annual_income}}</span>
                         </div>
                         <div>
                             <b>Telephone Number:</b>
-                            &nbsp;{{$show_account->organization_tel_no}}
+                            &nbsp;<span>{{$show_account->organization_tel_no}}</span>
                         </div>
 
 
                     <hr/>
                         <div>
                             <b>Grand Father's Name:</b>
-                            &nbsp;{{$show_account->grand_father_name}}
+                            &nbsp;<span>{{$show_account->grand_father_name}}</span>
                         </div>
                         <div>
                             <b>Father's Name:</b>
-                            &nbsp;{{$show_account->father_name}}
+                            &nbsp;<span>{{$show_account->father_name}}</span>
                         </div>
                         <div>
                             <b>Mother's Name:</b>
-                            &nbsp;{{$show_account->mother_name}}
+                            &nbsp;<span>{{$show_account->mother_name}}</span>
                         </div>
                         <hr/>
                         <div><u>ADDRESS DETAILS:</u></div>
@@ -130,71 +130,71 @@
                         <br>
                         <div>
                             <b>Permanent House No:</b>
-                            &nbsp;{{$show_account->permanent_house_no}}
+                            &nbsp;<span>{{$show_account->permanent_house_no}}</span>
                         </div>
                         <div>
                             <b>Ward No:</b>
-                            &nbsp;{{$show_account->permanent_ward_no}}
+                            &nbsp;<span>{{$show_account->permanent_ward_no}}</span>
                         </div>
                         <div>
                             <b>VDC/MC:</b>
-                            &nbsp;{{$show_account->permanent_vdc_mc}}
+                            &nbsp;<span>{{$show_account->permanent_vdc_mc}}</span>
                         </div>
                         <div>
                             <b>City:</b>
-                            &nbsp;{{$show_account->permanent_city}}
+                            &nbsp;<span>{{$show_account->permanent_city}}</span>
                         </div>
                         <div>
                             <b>Country:</b>
-                            &nbsp;{{$show_account->permanent_country_name}}
+                            &nbsp;<span>{{$show_account->permanent_country_name}}</span>
                         </div>
                         <br>
                         <div>B) CURRENT DETAILS</div>
                         <div>
                             <b>Current House No.:</b>
-                            &nbsp;{{$show_account->current_house_no}}
+                            &nbsp;<span>{{$show_account->current_house_no}}</span>
                         </div>
                         <div>
                             <b>Address:</b>
-                            &nbsp;{{$show_account->current_address}}
+                            &nbsp;<span>{{$show_account->current_address}}</span>
                         </div>
                         <div>
                             <b>City:</b>
-                            &nbsp;{{$show_account->current_city}}
+                            &nbsp;<span>{{$show_account->current_city}}</span>
                         </div>
                         <div>
                             <b>Country Name:</b>
-                            &nbsp;{{$show_account->current_country_name}}
+                            &nbsp;<span>{{$show_account->current_country_name}}</span>
                         </div>
                         <hr/>
                         <div>
                             <b>Source of Fund:</b>
-                            &nbsp;{{$show_account->source_of_fund}}
+                            &nbsp;<span>{{$show_account->source_of_fund}}</span>
                         </div>
                         <div>
                             <b>Transaction Currency:</b>
-                            &nbsp;{{$show_account->expected_transaction_currency}}
+                            &nbsp;<span>{{$show_account->expected_transaction_currency}}</span>
                         </div>
                         <div>
                             <b>Expected Transaction Amount:</b>
-                            &nbsp;{{$show_account->expected_transaction_amount}}
+                            &nbsp;<span>{{$show_account->expected_transaction_amount}}</span>
                         </div>
                         <div>
                             <b>Expected Number of Transactions:</b>
-                            &nbsp;{{$show_account->expected_transaction_no}}
+                            &nbsp;<span>{{$show_account->expected_transaction_no}}</span>
                         </div>
                         <div>
                             <b>Nature of Transaction:</b>
-                            &nbsp;{{$show_account->nature_of_transaction}}
+                            &nbsp;<span>{{$show_account->nature_of_transaction}}</span>
                         </div>
                         <div>
                             <b>Internet Banking:</b>
-                            &nbsp;{{$show_account->internet_banking}}
+                            &nbsp;<span>{{$show_account->internet_banking}}</span>
                         </div>
                         <hr/>
                         <div>
                             <b>Uploaded Doc:</b>
-                            &nbsp;{{$show_account->uploaded_doc}}
+                            &nbsp;<span>{{$show_account->uploaded_doc}}</span>
 
 {{--                           <a href="storage\uploaded_doc\{{$show_account->uploaded_doc}}" >(CLICK HERE)</a>--}}
                           <a href="http://localhost:8000/storage/uploaded_doc/{{$show_account->uploaded_doc}}" target="_blank">(CLICK HERE)</a>
